@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       unit: { type: DataTypes.STRING(50), allowNull: false },
       kedai_id: { type: DataTypes.STRING(36), allowNull: false },
       is_aktif: { type: DataTypes.BOOLEAN, defaultValue: true },
+      dibuat_pada: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+      },
     },
     {
       tableName: "InventarisMaster",

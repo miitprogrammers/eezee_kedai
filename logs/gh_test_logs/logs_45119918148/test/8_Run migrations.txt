@@ -1,0 +1,29 @@
+﻿2025-09-09T15:40:40.4457380Z ##[group]Run cd be
+2025-09-09T15:40:40.4457619Z [36;1mcd be[0m
+2025-09-09T15:40:40.4457870Z [36;1mnpx sequelize-cli db:migrate --env development[0m
+2025-09-09T15:40:40.4485561Z shell: /usr/bin/bash -e {0}
+2025-09-09T15:40:40.4485806Z ##[endgroup]
+2025-09-09T15:40:40.9596355Z 
+2025-09-09T15:40:40.9602117Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T15:40:40.9603897Z 
+2025-09-09T15:40:40.9845002Z [dotenv@17.2.2] injecting env (4) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:40.9851419Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T15:40:40.9852167Z Using environment "development".
+2025-09-09T15:40:41.1163632Z == 20250909-create-cabang: migrating =======
+2025-09-09T15:40:41.1359514Z == 20250909-create-cabang: migrated (0.019s)
+2025-09-09T15:40:41.1359841Z 
+2025-09-09T15:40:41.1400072Z == 20250909-create-histori_inventaris: migrating =======
+2025-09-09T15:40:41.1529484Z == 20250909-create-histori_inventaris: migrated (0.013s)
+2025-09-09T15:40:41.1530102Z 
+2025-09-09T15:40:41.1562325Z == 20250909-create-inventaris_master: migrating =======
+2025-09-09T15:40:41.1693989Z == 20250909-create-inventaris_master: migrated (0.013s)
+2025-09-09T15:40:41.1694377Z 
+2025-09-09T15:40:41.1725492Z == 20250909-create-kedai: migrating =======
+2025-09-09T15:40:41.1846757Z == 20250909-create-kedai: migrated (0.012s)
+2025-09-09T15:40:41.1847115Z 
+2025-09-09T15:40:41.1891322Z == 20250909-create-pengguna: migrating =======
+2025-09-09T15:40:41.2033322Z == 20250909-create-pengguna: migrated (0.014s)
+2025-09-09T15:40:41.2033704Z 
+2025-09-09T15:40:41.2064964Z == 20250909-create-stok_saat_ini: migrating =======
+2025-09-09T15:40:41.2192145Z == 20250909-create-stok_saat_ini: migrated (0.013s)
+2025-09-09T15:40:41.2192550Z 

@@ -1,0 +1,623 @@
+﻿2025-09-09T15:40:41.2366072Z ##[group]Run cd be
+2025-09-09T15:40:41.2366501Z [36;1mcd be[0m
+2025-09-09T15:40:41.2366864Z [36;1mnpm test[0m
+2025-09-09T15:40:41.2412220Z shell: /usr/bin/bash -e {0}
+2025-09-09T15:40:41.2413110Z ##[endgroup]
+2025-09-09T15:40:41.3548210Z 
+2025-09-09T15:40:41.3549077Z > eezee-kedai-backend@1.0.0 test
+2025-09-09T15:40:41.3549625Z > jest --runInBand
+2025-09-09T15:40:41.3550013Z 
+2025-09-09T15:40:43.2068927Z [0mPOST /api/mgmt/kedai [32m201[0m 37.040 ms - 147[0m
+2025-09-09T15:40:43.2069661Z [0mPOST /api/mgmt/cabang [32m201[0m 6.384 ms - 217[0m
+2025-09-09T15:40:43.2070321Z [0mPOST /api/inventory/inventaris [31m500[0m 33.684 ms - 60[0m
+2025-09-09T15:40:43.3138103Z [0mPOST /api/inventory/inventaris [31m500[0m 3.916 ms - 60[0m
+2025-09-09T15:40:43.4193295Z [0mPOST /api/inventory/inventaris [31m500[0m 3.184 ms - 60[0m
+2025-09-09T15:40:43.5751355Z [0mPOST /api/inventory/inventaris [31m500[0m 3.363 ms - 60[0m
+2025-09-09T15:40:43.5752054Z [0mPOST /api/mgmt/kedai [32m201[0m 4.572 ms - 146[0m
+2025-09-09T15:40:43.5752816Z [0mPOST /api/mgmt/cabang [32m201[0m 4.326 ms - 216[0m
+2025-09-09T15:40:43.5753392Z [0mPOST /api/inventory/inventaris [31m500[0m 2.745 ms - 60[0m
+2025-09-09T15:40:43.5753986Z [0mPOST /api/inventory/inventaris [31m500[0m 3.176 ms - 60[0m
+2025-09-09T15:40:43.7604320Z [0mPOST /api/inventory/inventaris [31m500[0m 3.920 ms - 60[0m
+2025-09-09T15:40:43.8341363Z FAIL tests/stockTransaction_extra.test.js
+2025-09-09T15:40:43.8528183Z   ● Console
+2025-09-09T15:40:43.8528411Z 
+2025-09-09T15:40:43.8528559Z     console.log
+2025-09-09T15:40:43.8529561Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2025-09-09T15:40:43.8530233Z 
+2025-09-09T15:40:43.8530677Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:43.8531088Z 
+2025-09-09T15:40:43.8531259Z     console.log
+2025-09-09T15:40:43.8532292Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2025-09-09T15:40:43.8534170Z 
+2025-09-09T15:40:43.8534488Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:43.8534894Z 
+2025-09-09T15:40:43.8535079Z     console.log
+2025-09-09T15:40:43.8536035Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:42"}
+2025-09-09T15:40:43.8536713Z 
+2025-09-09T15:40:43.8537288Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8537810Z 
+2025-09-09T15:40:43.8537934Z     console.log
+2025-09-09T15:40:43.8538759Z       info: Kedai created: b68c0c98-5a4a-45f2-ba5b-c4d831fc4185 {"details":null,"timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8539404Z 
+2025-09-09T15:40:43.8539857Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8540355Z 
+2025-09-09T15:40:43.8540471Z     console.log
+2025-09-09T15:40:43.8541263Z       info: Cabang created: 1e00ad2e-9ac3-4d12-869d-8862411424b0 {"details":null,"timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8541701Z 
+2025-09-09T15:40:43.8542022Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8542353Z 
+2025-09-09T15:40:43.8542435Z     console.log
+2025-09-09T15:40:43.8547438Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8551606Z 
+2025-09-09T15:40:43.8551959Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8552295Z 
+2025-09-09T15:40:43.8552382Z     console.log
+2025-09-09T15:40:43.8556644Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8559841Z 
+2025-09-09T15:40:43.8560148Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8560432Z 
+2025-09-09T15:40:43.8560505Z     console.log
+2025-09-09T15:40:43.8564860Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8568090Z 
+2025-09-09T15:40:43.8568393Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8568669Z 
+2025-09-09T15:40:43.8568742Z     console.log
+2025-09-09T15:40:43.8573097Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8576159Z 
+2025-09-09T15:40:43.8576452Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8576729Z 
+2025-09-09T15:40:43.8577014Z     console.log
+2025-09-09T15:40:43.8577549Z       info: Kedai created: f471aa94-af5c-4e18-bfd5-900f3c4a691a {"details":null,"timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8578039Z 
+2025-09-09T15:40:43.8578332Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8578606Z 
+2025-09-09T15:40:43.8578674Z     console.log
+2025-09-09T15:40:43.8579185Z       info: Cabang created: a1c0e1a7-7e7d-4162-8e93-f664971b0618 {"details":null,"timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8579558Z 
+2025-09-09T15:40:43.8579850Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8580125Z 
+2025-09-09T15:40:43.8580200Z     console.log
+2025-09-09T15:40:43.8584577Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8587625Z 
+2025-09-09T15:40:43.8587925Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8588206Z 
+2025-09-09T15:40:43.8588278Z     console.log
+2025-09-09T15:40:43.8592505Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8596595Z 
+2025-09-09T15:40:43.8597125Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8597679Z 
+2025-09-09T15:40:43.8597819Z     console.log
+2025-09-09T15:40:43.8605069Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8611153Z 
+2025-09-09T15:40:43.8611676Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8612200Z 
+2025-09-09T15:40:43.8612330Z     console.log
+2025-09-09T15:40:43.8617588Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:43"}
+2025-09-09T15:40:43.8620683Z 
+2025-09-09T15:40:43.8621008Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:43.8621299Z 
+2025-09-09T15:40:43.8621821Z   ● Stock Transaction extra tests: stock-out & HPP › HPP: weighted average after multiple stock-ins
+2025-09-09T15:40:43.8622167Z 
+2025-09-09T15:40:43.8622348Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:43.8622544Z 
+2025-09-09T15:40:43.8622803Z     Expected value: 500
+2025-09-09T15:40:43.8623056Z     Received array: [200, 201]
+2025-09-09T15:40:43.8623204Z 
+2025-09-09T15:40:43.8623379Z     [0m [90m 30 |[39m       kedaiId
+2025-09-09T15:40:43.8623728Z      [90m 31 |[39m     )[33m;[39m
+2025-09-09T15:40:43.8624414Z     [31m[1m>[22m[39m[90m 32 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:43.8625004Z      [90m    |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:43.8625287Z      [90m 33 |[39m
+2025-09-09T15:40:43.8625644Z      [90m 34 |[39m     [90m// first stock-in: 10 units @ 100[39m
+2025-09-09T15:40:43.8626062Z      [90m 35 |[39m     [36mawait[39m request(app)[0m
+2025-09-09T15:40:43.8626247Z 
+2025-09-09T15:40:43.8626500Z       at Object.toContain (tests/stockTransaction_extra.test.js:32:24)
+2025-09-09T15:40:43.8626742Z 
+2025-09-09T15:40:43.8627157Z   ● Stock Transaction extra tests: stock-out & HPP › stock-out reduces stok and creates history
+2025-09-09T15:40:43.8627482Z 
+2025-09-09T15:40:43.8627656Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:43.8627850Z 
+2025-09-09T15:40:43.8627935Z     Expected value: 500
+2025-09-09T15:40:43.8628181Z     Received array: [200, 201]
+2025-09-09T15:40:43.8628326Z 
+2025-09-09T15:40:43.8628486Z     [0m [90m  95 |[39m       kedaiId
+2025-09-09T15:40:43.8628802Z      [90m  96 |[39m     )[33m;[39m
+2025-09-09T15:40:43.8629547Z     [31m[1m>[22m[39m[90m  97 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:43.8630120Z      [90m     |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:43.8630396Z      [90m  98 |[39m
+2025-09-09T15:40:43.8630709Z      [90m  99 |[39m     [90m// stock-in first[39m
+2025-09-09T15:40:43.8631103Z      [90m 100 |[39m     [36mawait[39m request(app)[0m
+2025-09-09T15:40:43.8631298Z 
+2025-09-09T15:40:43.8631543Z       at Object.toContain (tests/stockTransaction_extra.test.js:97:24)
+2025-09-09T15:40:43.8631783Z 
+2025-09-09T15:40:44.1163136Z [0mPOST /api/inventory/inventaris [31m500[0m 3.310 ms - 60[0m
+2025-09-09T15:40:44.2342372Z [0mPOST /api/mgmt/kedai [32m201[0m 13.659 ms - 147[0m
+2025-09-09T15:40:44.2343627Z [0mPOST /api/mgmt/cabang [32m201[0m 4.176 ms - 217[0m
+2025-09-09T15:40:44.2344420Z [0mPOST /api/inventory/inventaris [31m500[0m 34.229 ms - 60[0m
+2025-09-09T15:40:44.2345040Z [0mPOST /api/inventory/inventaris [31m500[0m 2.851 ms - 60[0m
+2025-09-09T15:40:44.4390739Z [0mPOST /api/inventory/inventaris [31m500[0m 2.700 ms - 60[0m
+2025-09-09T15:40:44.5946320Z [0mPOST /api/inventory/inventaris [31m500[0m 2.829 ms - 60[0m
+2025-09-09T15:40:44.5947010Z [0mPOST /api/mgmt/kedai [32m201[0m 3.706 ms - 148[0m
+2025-09-09T15:40:44.5947636Z [0mPOST /api/inventory/inventaris [31m500[0m 2.057 ms - 60[0m
+2025-09-09T15:40:44.5948280Z [0mPOST /api/inventory/inventaris [31m500[0m 2.014 ms - 60[0m
+2025-09-09T15:40:44.7644538Z [0mPOST /api/inventory/inventaris [31m500[0m 2.266 ms - 60[0m
+2025-09-09T15:40:44.8333873Z FAIL tests/stockTransaction_negative.test.js
+2025-09-09T15:40:44.8433792Z   ● Console
+2025-09-09T15:40:44.8434101Z 
+2025-09-09T15:40:44.8434245Z     console.log
+2025-09-09T15:40:44.8435322Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:44.8435978Z 
+2025-09-09T15:40:44.8436266Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:44.8436592Z 
+2025-09-09T15:40:44.8436731Z     console.log
+2025-09-09T15:40:44.8437670Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2025-09-09T15:40:44.8438226Z 
+2025-09-09T15:40:44.8438495Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:44.8438825Z 
+2025-09-09T15:40:44.8438959Z     console.log
+2025-09-09T15:40:44.8439711Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8440284Z 
+2025-09-09T15:40:44.8440744Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8441237Z 
+2025-09-09T15:40:44.8441391Z     console.log
+2025-09-09T15:40:44.8442215Z       info: Kedai created: fb27f61c-b1d0-4726-ae5e-c8bbff13fdaf {"details":null,"timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8443126Z 
+2025-09-09T15:40:44.8443590Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8444082Z 
+2025-09-09T15:40:44.8444209Z     console.log
+2025-09-09T15:40:44.8445036Z       info: Cabang created: 524dbaa7-82f3-46d2-b709-dd61862b946b {"details":null,"timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8445693Z 
+2025-09-09T15:40:44.8446151Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8446650Z 
+2025-09-09T15:40:44.8446774Z     console.log
+2025-09-09T15:40:44.8453902Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8459561Z 
+2025-09-09T15:40:44.8460049Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8460583Z 
+2025-09-09T15:40:44.8460723Z     console.log
+2025-09-09T15:40:44.8467741Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8474256Z 
+2025-09-09T15:40:44.8474786Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8475349Z 
+2025-09-09T15:40:44.8475504Z     console.log
+2025-09-09T15:40:44.8482384Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8487996Z 
+2025-09-09T15:40:44.8488523Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8489081Z 
+2025-09-09T15:40:44.8489225Z     console.log
+2025-09-09T15:40:44.8496345Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8501838Z 
+2025-09-09T15:40:44.8502354Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8503115Z 
+2025-09-09T15:40:44.8503273Z     console.log
+2025-09-09T15:40:44.8504156Z       info: Kedai created: 2b305642-b175-4e91-9a7f-a3e8b7dcbd9f {"details":null,"timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8504823Z 
+2025-09-09T15:40:44.8505322Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8505866Z 
+2025-09-09T15:40:44.8506019Z     console.log
+2025-09-09T15:40:44.8513102Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8519259Z 
+2025-09-09T15:40:44.8519784Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8520347Z 
+2025-09-09T15:40:44.8520493Z     console.log
+2025-09-09T15:40:44.8527553Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8533168Z 
+2025-09-09T15:40:44.8533677Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8534237Z 
+2025-09-09T15:40:44.8534393Z     console.log
+2025-09-09T15:40:44.8541333Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8547009Z 
+2025-09-09T15:40:44.8547529Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8548071Z 
+2025-09-09T15:40:44.8548217Z     console.log
+2025-09-09T15:40:44.8555438Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:44"}
+2025-09-09T15:40:44.8561338Z 
+2025-09-09T15:40:44.8561857Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:44.8562387Z 
+2025-09-09T15:40:44.8563582Z   ● Stock Transaction negative tests › DB error during StokSaatIni.create returns 500 and does not create history
+2025-09-09T15:40:44.8564302Z 
+2025-09-09T15:40:44.8564619Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:44.8564981Z 
+2025-09-09T15:40:44.8565147Z     Expected value: 500
+2025-09-09T15:40:44.8565603Z     Received array: [200, 201]
+2025-09-09T15:40:44.8565863Z 
+2025-09-09T15:40:44.8566203Z     [0m [90m 26 |[39m       kedaiId
+2025-09-09T15:40:44.8566785Z      [90m 27 |[39m     )[33m;[39m
+2025-09-09T15:40:44.8567963Z     [31m[1m>[22m[39m[90m 28 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:44.8568995Z      [90m    |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:44.8569530Z      [90m 29 |[39m
+2025-09-09T15:40:44.8570128Z      [90m 30 |[39m     [90m// mock create to throw[39m
+2025-09-09T15:40:44.8570881Z      [90m 31 |[39m     [36mconst[39m spy [33m=[39m jest[0m
+2025-09-09T15:40:44.8571261Z 
+2025-09-09T15:40:44.8571691Z       at Object.toContain (tests/stockTransaction_negative.test.js:28:24)
+2025-09-09T15:40:44.8572174Z 
+2025-09-09T15:40:44.8573366Z   ● Stock Transaction negative tests › stock-in with non-existent cabang_id currently still creates stok (observed behavior)
+2025-09-09T15:40:44.8574158Z 
+2025-09-09T15:40:44.8574478Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:44.8574849Z 
+2025-09-09T15:40:44.8575024Z     Expected value: 500
+2025-09-09T15:40:44.8575451Z     Received array: [200, 201]
+2025-09-09T15:40:44.8575709Z 
+2025-09-09T15:40:44.8576031Z     [0m [90m 83 |[39m       kedaiId
+2025-09-09T15:40:44.8576560Z      [90m 84 |[39m     )[33m;[39m
+2025-09-09T15:40:44.8577678Z     [31m[1m>[22m[39m[90m 85 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:44.8578702Z      [90m    |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:44.8579204Z      [90m 86 |[39m
+2025-09-09T15:40:44.8580034Z      [90m 87 |[39m     [36mconst[39m res [33m=[39m [36mawait[39m request(app)
+2025-09-09T15:40:44.8581029Z      [90m 88 |[39m       [33m.[39mpost([32m"/api/inventory/tx/stock-in"[39m)[0m
+2025-09-09T15:40:44.8581472Z 
+2025-09-09T15:40:44.8581934Z       at Object.toContain (tests/stockTransaction_negative.test.js:85:24)
+2025-09-09T15:40:44.8582426Z 
+2025-09-09T15:40:45.1037859Z [0mPOST /api/inventory/inventaris [31m500[0m 2.797 ms - 60[0m
+2025-09-09T15:40:45.2169093Z [0mPOST /api/mgmt/kedai [33m422[0m 2.679 ms - 174[0m
+2025-09-09T15:40:45.2170120Z [0mPOST /api/mgmt/cabang [33m422[0m 1.651 ms - 94[0m
+2025-09-09T15:40:45.2171071Z [0mPOST /api/mgmt/pengguna [33m422[0m 2.866 ms - 410[0m
+2025-09-09T15:40:45.2172025Z [0mPOST /api/mgmt/kedai [32m201[0m 29.029 ms - 147[0m
+2025-09-09T15:40:45.2173098Z [0mPOST /api/mgmt/cabang [32m201[0m 5.463 ms - 217[0m
+2025-09-09T15:40:45.3386326Z [0mPOST /api/mgmt/pengguna [32m201[0m 68.158 ms - 89[0m
+2025-09-09T15:40:45.3387042Z [0mPOST /api/mgmt/pengguna [33m400[0m 96.785 ms - 28[0m
+2025-09-09T15:40:45.3637609Z PASS tests/e2e_negative.test.js
+2025-09-09T15:40:45.3703474Z   ● Console
+2025-09-09T15:40:45.3703695Z 
+2025-09-09T15:40:45.3703836Z     console.log
+2025-09-09T15:40:45.3704834Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2025-09-09T15:40:45.3705184Z 
+2025-09-09T15:40:45.3705565Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:45.3705770Z 
+2025-09-09T15:40:45.3705847Z     console.log
+2025-09-09T15:40:45.3706498Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-09-09T15:40:45.3706856Z 
+2025-09-09T15:40:45.3707046Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:45.3707239Z 
+2025-09-09T15:40:45.3707312Z     console.log
+2025-09-09T15:40:45.3707784Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3708093Z 
+2025-09-09T15:40:45.3708400Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3708689Z 
+2025-09-09T15:40:45.3708759Z     console.log
+2025-09-09T15:40:45.3709368Z       info: Kedai created: ed5e2754-07d7-4113-bc00-a02bd334bbed {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3709749Z 
+2025-09-09T15:40:45.3710057Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3710339Z 
+2025-09-09T15:40:45.3710412Z     console.log
+2025-09-09T15:40:45.3710934Z       info: Cabang created: 418709ab-b1ba-4dd4-a20d-4d8258180c06 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3711321Z 
+2025-09-09T15:40:45.3711614Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3711886Z 
+2025-09-09T15:40:45.3711966Z     console.log
+2025-09-09T15:40:45.3712503Z       info: Pengguna created: 58e3fb4e-2954-45ee-9d1e-917b90719b6f {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3713104Z 
+2025-09-09T15:40:45.3713396Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3713676Z 
+2025-09-09T15:40:45.3713751Z     console.log
+2025-09-09T15:40:45.3717356Z       error: Pengguna create failed {"details":{"how":"createPengguna"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at createPengguna (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/penggunaController.js:10:15)","timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3720055Z 
+2025-09-09T15:40:45.3720341Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3720620Z 
+2025-09-09T15:40:45.3720695Z     console.log
+2025-09-09T15:40:45.3721351Z       info: Pengguna deleted: 58e3fb4e-2954-45ee-9d1e-917b90719b6f {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3721746Z 
+2025-09-09T15:40:45.3722028Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3722302Z 
+2025-09-09T15:40:45.3722374Z     console.log
+2025-09-09T15:40:45.3723213Z       info: Cabang deleted: 418709ab-b1ba-4dd4-a20d-4d8258180c06 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3723615Z 
+2025-09-09T15:40:45.3723900Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3724182Z 
+2025-09-09T15:40:45.3724252Z     console.log
+2025-09-09T15:40:45.3724767Z       info: Kedai deleted: ed5e2754-07d7-4113-bc00-a02bd334bbed {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.3725135Z 
+2025-09-09T15:40:45.3725606Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.3725890Z 
+2025-09-09T15:40:45.6246261Z [0mDELETE /api/mgmt/pengguna/58e3fb4e-2954-45ee-9d1e-917b90719b6f [32m200[0m 9.513 ms - 16[0m
+2025-09-09T15:40:45.6248313Z [0mDELETE /api/mgmt/cabang/418709ab-b1ba-4dd4-a20d-4d8258180c06 [32m200[0m 5.203 ms - 16[0m
+2025-09-09T15:40:45.6249712Z [0mDELETE /api/mgmt/kedai/ed5e2754-07d7-4113-bc00-a02bd334bbed [32m200[0m 5.068 ms - 16[0m
+2025-09-09T15:40:45.7427266Z [0mPOST /api/mgmt/kedai [32m201[0m 14.666 ms - 147[0m
+2025-09-09T15:40:45.7428259Z [0mPOST /api/mgmt/cabang [32m201[0m 4.715 ms - 217[0m
+2025-09-09T15:40:45.7429140Z [0mPOST /api/mgmt/pengguna [32m201[0m 65.732 ms - 89[0m
+2025-09-09T15:40:45.7430373Z [0mGET /api/mgmt/pengguna/c13a87a2-fafd-41e3-85c8-4bfb5977ab2f [32m200[0m 3.033 ms - 295[0m
+2025-09-09T15:40:45.7431677Z [0mPUT /api/mgmt/pengguna/c13a87a2-fafd-41e3-85c8-4bfb5977ab2f [32m200[0m 6.961 ms - 16[0m
+2025-09-09T15:40:45.7433319Z [0mDELETE /api/mgmt/pengguna/c13a87a2-fafd-41e3-85c8-4bfb5977ab2f [32m200[0m 4.115 ms - 16[0m
+2025-09-09T15:40:45.7548619Z PASS tests/e2e_crud.test.js
+2025-09-09T15:40:45.7611580Z   ● Console
+2025-09-09T15:40:45.7611798Z 
+2025-09-09T15:40:45.7611949Z     console.log
+2025-09-09T15:40:45.7612922Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2025-09-09T15:40:45.7613315Z 
+2025-09-09T15:40:45.7613527Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:45.7613769Z 
+2025-09-09T15:40:45.7613856Z     console.log
+2025-09-09T15:40:45.7614505Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-09-09T15:40:45.7614886Z 
+2025-09-09T15:40:45.7615088Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:45.7615324Z 
+2025-09-09T15:40:45.7615408Z     console.log
+2025-09-09T15:40:45.7615941Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7616342Z 
+2025-09-09T15:40:45.7616680Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7617051Z 
+2025-09-09T15:40:45.7617133Z     console.log
+2025-09-09T15:40:45.7617757Z       info: Kedai created: f5f2ac79-17d4-4e9f-a133-7559da614630 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7618210Z 
+2025-09-09T15:40:45.7618545Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7618886Z 
+2025-09-09T15:40:45.7618984Z     console.log
+2025-09-09T15:40:45.7619678Z       info: Cabang created: 4c9a7368-b691-4939-85b0-67730607afad {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7620137Z 
+2025-09-09T15:40:45.7620489Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7620835Z 
+2025-09-09T15:40:45.7620917Z     console.log
+2025-09-09T15:40:45.7621556Z       info: Pengguna created: c13a87a2-fafd-41e3-85c8-4bfb5977ab2f {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7622040Z 
+2025-09-09T15:40:45.7622459Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7622996Z 
+2025-09-09T15:40:45.7623090Z     console.log
+2025-09-09T15:40:45.7623652Z       info: Pengguna updated: c13a87a2-fafd-41e3-85c8-4bfb5977ab2f {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7624035Z 
+2025-09-09T15:40:45.7624318Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7624591Z 
+2025-09-09T15:40:45.7624666Z     console.log
+2025-09-09T15:40:45.7644441Z       info: Pengguna deleted: c13a87a2-fafd-41e3-85c8-4bfb5977ab2f {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7645073Z 
+2025-09-09T15:40:45.7645353Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7645658Z 
+2025-09-09T15:40:45.7646030Z     console.log
+2025-09-09T15:40:45.7646515Z       info: Cabang deleted: 4c9a7368-b691-4939-85b0-67730607afad {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7647047Z 
+2025-09-09T15:40:45.7647287Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7647581Z 
+2025-09-09T15:40:45.7647657Z     console.log
+2025-09-09T15:40:45.7648124Z       info: Kedai deleted: f5f2ac79-17d4-4e9f-a133-7559da614630 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:45.7648653Z 
+2025-09-09T15:40:45.7648905Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:45.7649198Z 
+2025-09-09T15:40:45.9858350Z [0mDELETE /api/mgmt/cabang/4c9a7368-b691-4939-85b0-67730607afad [32m200[0m 4.559 ms - 16[0m
+2025-09-09T15:40:45.9859230Z [0mDELETE /api/mgmt/kedai/f5f2ac79-17d4-4e9f-a133-7559da614630 [32m200[0m 4.169 ms - 16[0m
+2025-09-09T15:40:46.1066860Z [0mPOST /api/mgmt/kedai [32m201[0m 13.887 ms - 149[0m
+2025-09-09T15:40:46.1067500Z [0mPOST /api/mgmt/cabang [32m201[0m 4.179 ms - 219[0m
+2025-09-09T15:40:46.1068015Z [0mPOST /api/inventory/inventaris [31m500[0m 33.583 ms - 60[0m
+2025-09-09T15:40:46.1068551Z [0mPOST /api/inventory/inventaris [31m500[0m 2.536 ms - 60[0m
+2025-09-09T15:40:46.3084864Z [0mPOST /api/inventory/inventaris [31m500[0m 2.782 ms - 60[0m
+2025-09-09T15:40:46.4006431Z FAIL tests/stockTransaction.test.js
+2025-09-09T15:40:46.4080090Z   ● Console
+2025-09-09T15:40:46.4080291Z 
+2025-09-09T15:40:46.4080426Z     console.log
+2025-09-09T15:40:46.4081466Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:46.4082104Z 
+2025-09-09T15:40:46.4082373Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:46.4082888Z 
+2025-09-09T15:40:46.4083032Z     console.log
+2025-09-09T15:40:46.4083934Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:46.4084583Z 
+2025-09-09T15:40:46.4084831Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:46.4085206Z 
+2025-09-09T15:40:46.4085341Z     console.log
+2025-09-09T15:40:46.4086020Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:45"}
+2025-09-09T15:40:46.4086396Z 
+2025-09-09T15:40:46.4086688Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4087032Z 
+2025-09-09T15:40:46.4087121Z     console.log
+2025-09-09T15:40:46.4087662Z       info: Kedai created: ba20949a-40fb-4603-9e0e-9038b03dc01d {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4088119Z 
+2025-09-09T15:40:46.4088412Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4088763Z 
+2025-09-09T15:40:46.4088853Z     console.log
+2025-09-09T15:40:46.4089407Z       info: Cabang created: 34012973-8d26-4c0b-bf0a-7dcf5db7e5d6 {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4089883Z 
+2025-09-09T15:40:46.4090177Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4090521Z 
+2025-09-09T15:40:46.4090611Z     console.log
+2025-09-09T15:40:46.4095429Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4099340Z 
+2025-09-09T15:40:46.4099611Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4099897Z 
+2025-09-09T15:40:46.4099981Z     console.log
+2025-09-09T15:40:46.4104020Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4107111Z 
+2025-09-09T15:40:46.4107366Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4107663Z 
+2025-09-09T15:40:46.4107736Z     console.log
+2025-09-09T15:40:46.4111313Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4114631Z 
+2025-09-09T15:40:46.4114878Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4115158Z 
+2025-09-09T15:40:46.4115236Z     console.log
+2025-09-09T15:40:46.4118757Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4121770Z 
+2025-09-09T15:40:46.4122005Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4122737Z 
+2025-09-09T15:40:46.4122825Z     console.log
+2025-09-09T15:40:46.4123267Z       info: Cabang deleted: 34012973-8d26-4c0b-bf0a-7dcf5db7e5d6 {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4123766Z 
+2025-09-09T15:40:46.4124027Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4124420Z 
+2025-09-09T15:40:46.4124554Z     console.log
+2025-09-09T15:40:46.4125375Z       info: Kedai deleted: ba20949a-40fb-4603-9e0e-9038b03dc01d {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:46.4126055Z 
+2025-09-09T15:40:46.4126502Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:46.4127026Z 
+2025-09-09T15:40:46.4127737Z   ● Stock Transaction - /tx/stock-in › happy path: stock-in creates/updates stok and history
+2025-09-09T15:40:46.4128312Z 
+2025-09-09T15:40:46.4128591Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:46.4128946Z 
+2025-09-09T15:40:46.4129114Z     Expected value: 500
+2025-09-09T15:40:46.4129527Z     Received array: [200, 201]
+2025-09-09T15:40:46.4129786Z 
+2025-09-09T15:40:46.4130082Z     [0m [90m 37 |[39m       kedaiId
+2025-09-09T15:40:46.4130621Z      [90m 38 |[39m     )[33m;[39m
+2025-09-09T15:40:46.4131707Z     [31m[1m>[22m[39m[90m 39 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:46.4132903Z      [90m    |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:46.4133417Z      [90m 40 |[39m
+2025-09-09T15:40:46.4133923Z      [90m 41 |[39m     [90m// perform stock-in[39m
+2025-09-09T15:40:46.4134612Z      [90m 42 |[39m     [36mconst[39m payload [33m=[39m {[0m
+2025-09-09T15:40:46.4134963Z 
+2025-09-09T15:40:46.4135288Z       at Object.toContain (tests/stockTransaction.test.js:39:24)
+2025-09-09T15:40:46.4135721Z 
+2025-09-09T15:40:46.6438842Z [0mPOST /api/inventory/inventaris [31m500[0m 2.685 ms - 60[0m
+2025-09-09T15:40:46.6439550Z [0mPOST /api/inventory/tx/stock-in [33m422[0m 2.638 ms - 261[0m
+2025-09-09T15:40:46.6440084Z [0mPOST /api/inventory/tx/stock-in [33m422[0m 1.345 ms - 199[0m
+2025-09-09T15:40:46.6440800Z [0mDELETE /api/mgmt/cabang/34012973-8d26-4c0b-bf0a-7dcf5db7e5d6 [32m200[0m 4.359 ms - 16[0m
+2025-09-09T15:40:46.6441703Z [0mDELETE /api/mgmt/kedai/ba20949a-40fb-4603-9e0e-9038b03dc01d [32m200[0m 5.555 ms - 16[0m
+2025-09-09T15:40:46.7612333Z [0mPOST /api/mgmt/kedai [32m201[0m 13.641 ms - 147[0m
+2025-09-09T15:40:46.7613111Z [0mPOST /api/mgmt/cabang [32m201[0m 4.100 ms - 217[0m
+2025-09-09T15:40:46.7613602Z [0mPOST /api/inventory/inventaris [31m500[0m 33.019 ms - 60[0m
+2025-09-09T15:40:46.7614106Z [0mPOST /api/inventory/inventaris [31m500[0m 2.213 ms - 60[0m
+2025-09-09T15:40:46.9636630Z [0mPOST /api/inventory/inventaris [31m500[0m 2.751 ms - 60[0m
+2025-09-09T15:40:47.0220142Z FAIL tests/stockTransaction_concurrency.test.js
+2025-09-09T15:40:47.0271639Z   ● Console
+2025-09-09T15:40:47.0271912Z 
+2025-09-09T15:40:47.0272069Z     console.log
+2025-09-09T15:40:47.0273257Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2025-09-09T15:40:47.0273849Z 
+2025-09-09T15:40:47.0274106Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.0274445Z 
+2025-09-09T15:40:47.0274588Z     console.log
+2025-09-09T15:40:47.0275533Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:47.0276117Z 
+2025-09-09T15:40:47.0276377Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.0276717Z 
+2025-09-09T15:40:47.0276866Z     console.log
+2025-09-09T15:40:47.0277556Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0278082Z 
+2025-09-09T15:40:47.0278510Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0279007Z 
+2025-09-09T15:40:47.0279462Z     console.log
+2025-09-09T15:40:47.0280262Z       info: Kedai created: 7f881934-84a6-46ff-badd-95b7dc940882 {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0281121Z 
+2025-09-09T15:40:47.0281548Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0282030Z 
+2025-09-09T15:40:47.0282161Z     console.log
+2025-09-09T15:40:47.0283229Z       info: Cabang created: 9a2d5889-22f5-4afe-8269-ba7a2835c797 {"details":null,"timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0283916Z 
+2025-09-09T15:40:47.0284337Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0284845Z 
+2025-09-09T15:40:47.0284988Z     console.log
+2025-09-09T15:40:47.0291427Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0297112Z 
+2025-09-09T15:40:47.0297564Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0298068Z 
+2025-09-09T15:40:47.0298207Z     console.log
+2025-09-09T15:40:47.0304758Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0310210Z 
+2025-09-09T15:40:47.0310718Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0311259Z 
+2025-09-09T15:40:47.0311410Z     console.log
+2025-09-09T15:40:47.0318050Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:46"}
+2025-09-09T15:40:47.0324265Z 
+2025-09-09T15:40:47.0324771Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0325295Z 
+2025-09-09T15:40:47.0325440Z     console.log
+2025-09-09T15:40:47.0331829Z       error: Inventaris create failed {"details":{"how":"createInventaris","plan":"inspect payload / constraints"},"error":"Error: \n    at Query.run (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/mysql/query.js:46:25)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/sequelize.js:650:28\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at MySQLQueryInterface.insert (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n    at model.save (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:4154:35)\n    at Function.create (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/sequelize/src/model.js:2305:12)\n    at Object.<anonymous>.exports.createInventaris (/home/runner/work/eezee_kedai/eezee_kedai/be/controllers/inventarisController.js:7:17)","timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.0337461Z 
+2025-09-09T15:40:47.0337961Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.0338488Z 
+2025-09-09T15:40:47.0339176Z   ● Stock Transaction concurrency › parallel stock-ins result in correct final stok
+2025-09-09T15:40:47.0339739Z 
+2025-09-09T15:40:47.0340016Z     expect(received).toContain(expected) // indexOf
+2025-09-09T15:40:47.0340386Z 
+2025-09-09T15:40:47.0340546Z     Expected value: 500
+2025-09-09T15:40:47.0340957Z     Received array: [200, 201]
+2025-09-09T15:40:47.0341225Z 
+2025-09-09T15:40:47.0341523Z     [0m [90m 29 |[39m       kedaiId
+2025-09-09T15:40:47.0342093Z      [90m 30 |[39m     )[33m;[39m
+2025-09-09T15:40:47.0343414Z     [31m[1m>[22m[39m[90m 31 |[39m     expect([[35m200[39m[33m,[39m [35m201[39m])[33m.[39mtoContain(ri[33m.[39mstatus)[33m;[39m
+2025-09-09T15:40:47.0344481Z      [90m    |[39m                        [31m[1m^[22m[39m
+2025-09-09T15:40:47.0345032Z      [90m 32 |[39m
+2025-09-09T15:40:47.0345831Z      [90m 33 |[39m     [90m// prepare parallel requests: 5 requests each adding 10 units[39m
+2025-09-09T15:40:47.0346845Z      [90m 34 |[39m     [36mconst[39m calls [33m=[39m [][33m;[39m[0m
+2025-09-09T15:40:47.0347253Z 
+2025-09-09T15:40:47.0347679Z       at Object.toContain (tests/stockTransaction_concurrency.test.js:31:24)
+2025-09-09T15:40:47.0348224Z 
+2025-09-09T15:40:47.2515840Z [0mPOST /api/inventory/inventaris [31m500[0m 2.589 ms - 60[0m
+2025-09-09T15:40:47.4039978Z PASS tests/auth.test.js
+2025-09-09T15:40:47.4070371Z   ● Console
+2025-09-09T15:40:47.4070564Z 
+2025-09-09T15:40:47.4070655Z     console.log
+2025-09-09T15:40:47.4071318Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2025-09-09T15:40:47.4071718Z 
+2025-09-09T15:40:47.4071882Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.4072107Z 
+2025-09-09T15:40:47.4072188Z     console.log
+2025-09-09T15:40:47.4072995Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-09-09T15:40:47.4073402Z 
+2025-09-09T15:40:47.4073575Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.4073816Z 
+2025-09-09T15:40:47.4073899Z     console.log
+2025-09-09T15:40:47.4074389Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.4074766Z 
+2025-09-09T15:40:47.4075064Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.4075421Z 
+2025-09-09T15:40:47.4075505Z     console.log
+2025-09-09T15:40:47.4075984Z       info: Auth: register testuser+ci@test.local {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.4076672Z 
+2025-09-09T15:40:47.4076975Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.4077475Z 
+2025-09-09T15:40:47.4077559Z     console.log
+2025-09-09T15:40:47.4078019Z       info: Auth: login testuser+ci@test.local {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.4078390Z 
+2025-09-09T15:40:47.4078682Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.4079023Z 
+2025-09-09T15:40:47.6437718Z [0mPOST /api/auth/register [32m201[0m 77.360 ms - 387[0m
+2025-09-09T15:40:47.6438367Z [0mPOST /api/auth/login [32m200[0m 62.961 ms - 387[0m
+2025-09-09T15:40:47.6694877Z PASS tests/rbac.test.js
+2025-09-09T15:40:47.6736067Z   ● Console
+2025-09-09T15:40:47.6736268Z 
+2025-09-09T15:40:47.6736416Z     console.log
+2025-09-09T15:40:47.6737325Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2025-09-09T15:40:47.6737943Z 
+2025-09-09T15:40:47.6738202Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.6738581Z 
+2025-09-09T15:40:47.6738712Z     console.log
+2025-09-09T15:40:47.6739642Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+2025-09-09T15:40:47.6740258Z 
+2025-09-09T15:40:47.6740514Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.6740880Z 
+2025-09-09T15:40:47.6740978Z     console.log
+2025-09-09T15:40:47.6741470Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.6741861Z 
+2025-09-09T15:40:47.6742162Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.6742517Z 
+2025-09-09T15:40:47.6742843Z     console.log
+2025-09-09T15:40:47.6763277Z       error: RBAC: forbidden {"details":{"how":"requireRole","plan":"allowed: Pemilik"},"error":"Error: Forbidden: insufficient role\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/middleware/requireRole.js:10:21\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/route.js:149:13)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/middleware/verifyToken.js:30:5)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/jsonwebtoken/verify.js:261:12\n    at getSecret (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/jsonwebtoken/verify.js:97:14)\n    at Object.<anonymous>.module.exports [as verify] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/jsonwebtoken/verify.js:101:10)\n    at verify (/home/runner/work/eezee_kedai/eezee_kedai/be/middleware/verifyToken.js:20:7)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:175:3)\n    at router (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:47:12)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express-fileupload/lib/index.js:38:14\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at logger (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/morgan/index.js:144:5)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at urlencodedParser (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/body-parser/lib/types/urlencoded.js:57:7)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/body-parser/lib/read.js:132:5\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/raw-body/index.js:238:16)\n    at done (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:524:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.6780071Z 
+2025-09-09T15:40:47.6780337Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.6780623Z 
+2025-09-09T15:40:47.6780703Z     console.log
+2025-09-09T15:40:47.6781159Z       info: Kedai created: 3001a883-7898-4ee3-a74e-8b972dfefcf1 {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.6781529Z 
+2025-09-09T15:40:47.6781770Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.6782049Z 
+2025-09-09T15:40:47.9029096Z [0mPOST /api/mgmt/kedai [33m403[0m 5.392 ms - 21[0m
+2025-09-09T15:40:47.9030026Z [0mPOST /api/mgmt/kedai [32m201[0m 12.855 ms - 134[0m
+2025-09-09T15:40:47.9141072Z PASS tests/auth_validation.test.js
+2025-09-09T15:40:47.9196562Z   ● Console
+2025-09-09T15:40:47.9196794Z 
+2025-09-09T15:40:47.9196937Z     console.log
+2025-09-09T15:40:47.9197817Z       [dotenv@17.2.2] injecting env (4) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2025-09-09T15:40:47.9198688Z 
+2025-09-09T15:40:47.9198989Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.9199356Z 
+2025-09-09T15:40:47.9199480Z     console.log
+2025-09-09T15:40:47.9200552Z       [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-09-09T15:40:47.9201200Z 
+2025-09-09T15:40:47.9201473Z       at _log (node_modules/dotenv/lib/main.js:139:11)
+2025-09-09T15:40:47.9201822Z 
+2025-09-09T15:40:47.9201963Z     console.log
+2025-09-09T15:40:47.9202973Z       info: Server started at http://127.0.0.1:3000 {"details":null,"timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.9203573Z 
+2025-09-09T15:40:47.9204027Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.9204552Z 
+2025-09-09T15:40:47.9204698Z     console.log
+2025-09-09T15:40:47.9243070Z       error: Auth: missing token {"details":{"how":"verifyToken","plan":"provide Authorization header"},"error":"Error: No token provided\n    at verifyToken (/home/runner/work/eezee_kedai/eezee_kedai/be/middleware/verifyToken.js:10:14)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:175:3)\n    at router (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:47:12)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express-fileupload/lib/index.js:38:14\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at logger (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/morgan/index.js:144:5)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at urlencodedParser (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/body-parser/lib/types/urlencoded.js:68:7)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at jsonParser (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/body-parser/lib/types/json.js:100:7)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at cors (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:188:7)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:224:17\n    at originCallback (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:214:15)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/cors/lib/index.js:204:7)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at expressInit (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/middleware/init.js:40:5)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at query (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/middleware/query.js:45:5)\n    at Layer.handle [as handle_request] (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:328:13)\n    at /home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/router/index.js:175:3)\n    at Function.handle (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/application.js:181:10)\n    at Server.app (/home/runner/work/eezee_kedai/eezee_kedai/be/node_modules/express/lib/express.js:39:9)\n    at Server.emit (node:events:524:28)\n    at parserOnIncoming (node:_http_server:1141:12)\n    at HTTPParser.parserOnHeadersComplete (node:_http_common:118:17)","timestamp":"2025-09-09 15:40:47"}
+2025-09-09T15:40:47.9266851Z 
+2025-09-09T15:40:47.9267141Z       at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+2025-09-09T15:40:47.9267433Z 
+2025-09-09T15:40:47.9267453Z 
+2025-09-09T15:40:47.9267615Z Test Suites: 4 failed, 5 passed, 9 total
+2025-09-09T15:40:47.9267935Z Tests:       6 failed, 16 passed, 22 total
+2025-09-09T15:40:47.9268205Z Snapshots:   0 total
+2025-09-09T15:40:47.9268405Z Time:        6.267 s
+2025-09-09T15:40:47.9268605Z Ran all test suites.
+2025-09-09T15:40:48.0061258Z [0mPOST /api/auth/register [33m422[0m 1.068 ms - 315[0m
+2025-09-09T15:40:48.0061845Z [0mGET /api/mgmt/kedai [33m401[0m 3.649 ms - 29[0m
+2025-09-09T15:40:48.0693560Z ##[error]Process completed with exit code 1.

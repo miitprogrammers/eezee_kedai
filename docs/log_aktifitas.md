@@ -6398,3 +6398,470 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"action":"review_currentTask.md","files":["docs/currentTask.md"]}
 
+
+### 2025-09-09 22:40:26 WIB — INFO
+
+- Pushed fixes to remote
+
+- meta: {"action":"push_fixes","commit":"5a70111fd34cdf0e947f8752927de60d062b5391","files":[".tmp_log_test_result.js","be/controllers/inventarisController.js","be/controllers/penggunaController.js","be/package.json","be/scripts/seed_undo_test_users.js","be/tests/helpers.js","docs/log_aktifitas.md"]}
+
+
+### 2025-09-09 22:57:57 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Kedai created: 90d1d067-ebb0-4b63-bfd6-891eb49d288b
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Cabang created: b5fa72f1-4ea2-40c2-99fa-e3aa9f5606e6
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Pengguna created: b250426a-c0e9-4a89-88e4-59f4ad8d8a74
+
+
+### 2025-09-09 22:57:58 WIB — ERROR
+
+- WHAT: Pengguna create failed
+- WHY: Validation error
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: TBD
+
+- DETAILS: createPengguna
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Pengguna deleted: b250426a-c0e9-4a89-88e4-59f4ad8d8a74
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Cabang deleted: b5fa72f1-4ea2-40c2-99fa-e3aa9f5606e6
+
+
+### 2025-09-09 22:57:58 WIB — INFO
+
+- Kedai deleted: 90d1d067-ebb0-4b63-bfd6-891eb49d288b
+
+
+### 2025-09-09 22:57:59 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:57:59 WIB — INFO
+
+- Auth: register failed Validation error
+
+
+### 2025-09-09 22:57:59 WIB — INFO
+
+- Auth: login testuser+ci@test.local
+
+
+### 2025-09-09 22:58:00 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:00 WIB — INFO
+
+- Kedai created: c89e0f12-a958-4e32-a755-7353dd728d8a
+
+
+### 2025-09-09 22:58:00 WIB — INFO
+
+- Cabang created: 5333750a-f625-4822-a850-e09e34fba6fa
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — INFO
+
+- Kedai created: 6ae769db-ad5d-47eb-87db-46370bfbb9b0
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:00 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:01 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:01 WIB — INFO
+
+- Kedai created: c74f3d84-6f72-49af-80b8-3ba0cedeee8e
+
+
+### 2025-09-09 22:58:01 WIB — INFO
+
+- Cabang created: b4d31262-b581-4922-a57f-b563fa078ff0
+
+
+### 2025-09-09 22:58:01 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:01 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:01 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:02 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:02 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:02 WIB — INFO
+
+- Kedai created: 9a68ba72-f5eb-4cc1-99f1-86e3bcf5bc2d
+
+
+### 2025-09-09 22:58:02 WIB — INFO
+
+- Cabang created: 9c960736-f7a2-4c60-982e-05da9aaa9d8f
+
+
+### 2025-09-09 22:58:02 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:02 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — INFO
+
+- Kedai created: 210706fa-c344-40e5-a113-5b698aa64c34
+
+
+### 2025-09-09 22:58:03 WIB — INFO
+
+- Cabang created: 2eacb8f5-dc4e-49fa-88ec-f77f24fe5b8f
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:03 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Kedai created: 8b483eed-3af4-4995-ba76-a50db21b93be
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Cabang created: e90fc3ff-923e-444d-b2d5-13cf083b064f
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Pengguna created: ecceafbf-e7b7-4b31-bcd8-94fb5c782a02
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Pengguna updated: ecceafbf-e7b7-4b31-bcd8-94fb5c782a02
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Pengguna deleted: ecceafbf-e7b7-4b31-bcd8-94fb5c782a02
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Cabang deleted: e90fc3ff-923e-444d-b2d5-13cf083b064f
+
+
+### 2025-09-09 22:58:04 WIB — INFO
+
+- Kedai deleted: 8b483eed-3af4-4995-ba76-a50db21b93be
+
+
+### 2025-09-09 22:58:05 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:05 WIB — INFO
+
+- Kedai created: 498e5e28-521c-4dca-acb8-cd76146360cc
+
+
+### 2025-09-09 22:58:05 WIB — INFO
+
+- Cabang created: 7d821487-1b3d-4878-907e-cc19f2c13bc7
+
+
+### 2025-09-09 22:58:05 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:05 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:05 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:05 WIB — ERROR
+
+- WHAT: Inventaris create failed
+- WHY: Unknown column 'dibuat_pada' in 'field list'
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: inspect payload / constraints
+
+- DETAILS: createInventaris
+
+
+### 2025-09-09 22:58:05 WIB — INFO
+
+- Cabang deleted: 7d821487-1b3d-4878-907e-cc19f2c13bc7
+
+
+### 2025-09-09 22:58:05 WIB — INFO
+
+- Kedai deleted: 498e5e28-521c-4dca-acb8-cd76146360cc
+
+
+### 2025-09-09 22:58:06 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:06 WIB — ERROR
+
+- WHAT: RBAC: forbidden
+- WHY: Forbidden: insufficient role
+- HOW: Error: Forbidden: insufficient role |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\requireRole.js:10:21 |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: allowed: Pemilik
+
+- DETAILS: requireRole
+
+
+### 2025-09-09 22:58:06 WIB — INFO
+
+- Kedai created: 3fddb04a-0321-48cc-b055-fc197f4e103b
+
+
+### 2025-09-09 22:58:06 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-09 22:58:07 WIB — ERROR
+
+- WHAT: Auth: missing token
+- WHY: No token provided
+- HOW: Error: No token provided |     at verifyToken (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\verifyToken.js:10:14) |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: provide Authorization header
+
+- DETAILS: verifyToken
+

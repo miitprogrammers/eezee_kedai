@@ -1,0 +1,5 @@
+2025-09-09T15:40:03.6330000Z Requested labels: ubuntu-latest
+2025-09-09T15:40:03.6330000Z Job defined at: miitprogrammers/eezee_kedai/.github/workflows/ci.yml@refs/heads/main
+2025-09-09T15:40:03.6330000Z Waiting for a runner to pick up this job...
+2025-09-09T15:40:04.1520000Z Job is waiting for a hosted runner to come online.
+2025-09-09T15:40:04.1490000Z Job is about to start running on the hosted runner: GitHub Actions 1000000003
