@@ -8087,3 +8087,362 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"files":["docs/to_do.md"],"changes":"refine_recommendations_and_shortterm"}
 
+### 2025-09-10 00:37:00 WIB — INFO (Manual oleh ozzy)
+
+- npm create vuetify dari root menghasilkan folder '../fe' yang menjadi root frontend.
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Kedai created: efa33bd2-8d5b-450f-aa31-f58496f4c49b
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Cabang created: 8f35e518-2e23-4b7e-88d1-7da416b634e8
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- InventarisMaster created: item-hpp-1757439707551
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Stock IN processed: item-hpp-1757439707551@8f35e518-2e23-4b7e-88d1-7da416b634e8 +10
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Stock IN processed: item-hpp-1757439707551@8f35e518-2e23-4b7e-88d1-7da416b634e8 +5
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Cabang deleted: 8f35e518-2e23-4b7e-88d1-7da416b634e8
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Kedai deleted: efa33bd2-8d5b-450f-aa31-f58496f4c49b
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Kedai created: d16101fe-9d97-4968-aeba-3970da66b52c
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Cabang created: cd1578bf-2ebc-44a6-8d58-67a76a86fb6a
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- InventarisMaster created: item-so-1757439707551
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Stock IN processed: item-so-1757439707551@cd1578bf-2ebc-44a6-8d58-67a76a86fb6a +20
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Cabang deleted: cd1578bf-2ebc-44a6-8d58-67a76a86fb6a
+
+
+### 2025-09-10 00:41:47 WIB — INFO
+
+- Kedai deleted: d16101fe-9d97-4968-aeba-3970da66b52c
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Kedai created: cfdafb74-f97f-479b-b9cc-6548fb7ad3e3
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Cabang created: 6fe59f4f-a074-4a3a-9ad5-c09cf0a99113
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- InventarisMaster created: item-con-1757439708585
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Stock IN processed: item-con-1757439708585@6fe59f4f-a074-4a3a-9ad5-c09cf0a99113 +10
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Stock IN processed: item-con-1757439708585@6fe59f4f-a074-4a3a-9ad5-c09cf0a99113 +10
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Stock IN processed: item-con-1757439708585@6fe59f4f-a074-4a3a-9ad5-c09cf0a99113 +10
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Stock IN processed: item-con-1757439708585@6fe59f4f-a074-4a3a-9ad5-c09cf0a99113 +10
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Stock IN processed: item-con-1757439708585@6fe59f4f-a074-4a3a-9ad5-c09cf0a99113 +10
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Cabang deleted: 6fe59f4f-a074-4a3a-9ad5-c09cf0a99113
+
+
+### 2025-09-10 00:41:48 WIB — INFO
+
+- Kedai deleted: cfdafb74-f97f-479b-b9cc-6548fb7ad3e3
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Kedai created: d8823633-8607-485b-8350-7dc76ac27cd4
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Cabang created: 29b26fd8-4491-4e5b-9bd9-07bbc14fb2eb
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Pengguna created: 8dadddd4-f592-45fc-8402-22111ab0171f
+
+
+### 2025-09-10 00:41:49 WIB — ERROR
+
+- WHAT: Pengguna create failed
+- WHY: Validation error
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: TBD
+
+- DETAILS: createPengguna
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Pengguna deleted: 8dadddd4-f592-45fc-8402-22111ab0171f
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Cabang deleted: 29b26fd8-4491-4e5b-9bd9-07bbc14fb2eb
+
+
+### 2025-09-10 00:41:49 WIB — INFO
+
+- Kedai deleted: d8823633-8607-485b-8350-7dc76ac27cd4
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Kedai created: c6a96cc2-ef6f-400c-a5b5-4c2e5ea618c9
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Cabang created: 14e34900-6f20-4860-bc0a-accb8672d721
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- InventarisMaster created: item-neg-1757439710451
+
+
+### 2025-09-10 00:41:50 WIB — ERROR
+
+- WHAT: Stock IN failed
+- WHY: simulated db error
+- HOW: Error: simulated db error |     at Function.<anonymous> (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\tests\stockTransaction_negative.test.js:34:15) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\jest-mock\build\index.js:397:39
+- PLAN: retry
+
+- DETAILS: stockIn
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Cabang deleted: 14e34900-6f20-4860-bc0a-accb8672d721
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Kedai deleted: c6a96cc2-ef6f-400c-a5b5-4c2e5ea618c9
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Kedai created: 0a5e1472-bbea-4cbb-a1bd-7327bedae80f
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- InventarisMaster created: item-neg2-1757439710451
+
+
+### 2025-09-10 00:41:50 WIB — INFO
+
+- Kedai deleted: 0a5e1472-bbea-4cbb-a1bd-7327bedae80f
+
+
+### 2025-09-10 00:41:51 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:51 WIB — INFO
+
+- Auth: register failed Validation error
+
+
+### 2025-09-10 00:41:51 WIB — INFO
+
+- Auth: login testuser+ci@test.local
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Kedai created: 890baa7d-51fe-48db-8e6c-4a67fdb87f2c
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Cabang created: aee72cc8-8cca-42b1-9f8b-b9ccc83d1f3c
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Pengguna created: c210348c-8a4a-4fb7-8367-4fb33d79c7cf
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Pengguna updated: c210348c-8a4a-4fb7-8367-4fb33d79c7cf
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Pengguna deleted: c210348c-8a4a-4fb7-8367-4fb33d79c7cf
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Cabang deleted: aee72cc8-8cca-42b1-9f8b-b9ccc83d1f3c
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Kedai deleted: 890baa7d-51fe-48db-8e6c-4a67fdb87f2c
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:52 WIB — INFO
+
+- Kedai created: 6ab3237b-6e50-475e-8fdb-1fd61b53d6fc
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- Cabang created: d612e157-a793-4148-b0b2-a8522ed4f6c4
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- InventarisMaster created: item-1757439712960
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- Stock IN processed: item-1757439712960@d612e157-a793-4148-b0b2-a8522ed4f6c4 +10
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- Cabang deleted: d612e157-a793-4148-b0b2-a8522ed4f6c4
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- Kedai deleted: 6ab3237b-6e50-475e-8fdb-1fd61b53d6fc
+
+
+### 2025-09-10 00:41:53 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:53 WIB — ERROR
+
+- WHAT: Auth: missing token
+- WHY: No token provided
+- HOW: Error: No token provided |     at verifyToken (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\verifyToken.js:10:14) |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: provide Authorization header
+
+- DETAILS: verifyToken
+
+
+### 2025-09-10 00:41:54 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:41:54 WIB — ERROR
+
+- WHAT: RBAC: forbidden
+- WHY: Forbidden: insufficient role
+- HOW: Error: Forbidden: insufficient role |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\requireRole.js:10:21 |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: allowed: Pemilik
+
+- DETAILS: requireRole
+
+
+### 2025-09-10 00:41:54 WIB — INFO
+
+- Kedai created: 941c2545-ac85-45cf-8b0d-8259354ae0a8
+
+
+### 2025-09-10 00:44:21 WIB — INFO
+
+- Ran backend install and tests (npm ci && npm test)
+
+- meta: {"action":"run_tests","result":"9 test suites passed, 22 tests passed"}
+
