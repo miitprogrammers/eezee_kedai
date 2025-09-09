@@ -29,11 +29,11 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
   - Core tests (auth, CRUD) DONE.
   - Stock transaction tests (happy path, negative, concurrency) — DONE (ditambahkan di `be/tests/`).
 
-8. P2 — CI / CD: PENDING
-  - Skeleton workflow (`.github/workflows/ci.yml`) ada, belum divalidasi di remote.
+8. P2 — CI / CD: PROGRESS
+  - Skeleton workflow (`.github/workflows/ci.yml`) ada; remote run triggered after push and executed tests. Some test failures observed on the first run; workflow and service setup need verification.
 
-9. P1 — Dokumentasi pengujian & README untuk `be/`: PENDING
-  - Rekomendasi: tambahkan `be/README.md` berisi instruksi instalasi, migrasi, dan cara menjalankan tests.
+9. P1 — Dokumentasi pengujian & README untuk `be/`: PROGRESS
+  - `be/README.md` telah ditambahkan; mohon review. CI run indicates environment differences to address in docs.
 
 ## Rasio Penyelesaian (ringkas, 2025-09-09)
 
