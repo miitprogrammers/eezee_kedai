@@ -1,0 +1,79 @@
+﻿2025-09-09T16:38:12.6651703Z ##[group]Run cd be
+2025-09-09T16:38:12.6651946Z [36;1mcd be[0m
+2025-09-09T16:38:12.6652269Z [36;1m# retry migrations a few times while DB service finishes initialization[0m
+2025-09-09T16:38:12.6652642Z [36;1mfor i in 1 2 3 4 5; do[0m
+2025-09-09T16:38:12.6653024Z [36;1m  npx sequelize-cli db:migrate --env test && break || sleep $((i * 2))[0m
+2025-09-09T16:38:12.6653379Z [36;1mdone[0m
+2025-09-09T16:38:12.6683659Z shell: /usr/bin/bash -e {0}
+2025-09-09T16:38:12.6683894Z ##[endgroup]
+2025-09-09T16:38:13.2513777Z 
+2025-09-09T16:38:13.2520269Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:13.2520752Z 
+2025-09-09T16:38:13.2740224Z [dotenv@17.2.2] injecting env (6) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-09-09T16:38:13.2743392Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:13.2743972Z Using environment "test".
+2025-09-09T16:38:13.3963905Z == 20250909-create-cabang: migrating =======
+2025-09-09T16:38:13.4131225Z == 20250909-create-cabang: migrated (0.016s)
+2025-09-09T16:38:13.4132025Z 
+2025-09-09T16:38:13.4171248Z == 20250909-create-histori_inventaris: migrating =======
+2025-09-09T16:38:13.4296686Z == 20250909-create-histori_inventaris: migrated (0.012s)
+2025-09-09T16:38:13.4297141Z 
+2025-09-09T16:38:13.4328540Z == 20250909-create-inventaris_master: migrating =======
+2025-09-09T16:38:13.4459156Z == 20250909-create-inventaris_master: migrated (0.013s)
+2025-09-09T16:38:13.4459611Z 
+2025-09-09T16:38:13.4490840Z == 20250909-create-kedai: migrating =======
+2025-09-09T16:38:13.4611677Z == 20250909-create-kedai: migrated (0.012s)
+2025-09-09T16:38:13.4612013Z 
+2025-09-09T16:38:13.4646475Z == 20250909-create-pengguna: migrating =======
+2025-09-09T16:38:13.4791065Z == 20250909-create-pengguna: migrated (0.014s)
+2025-09-09T16:38:13.4791344Z 
+2025-09-09T16:38:13.4822404Z == 20250909-create-stok_saat_ini: migrating =======
+2025-09-09T16:38:13.4939949Z == 20250909-create-stok_saat_ini: migrated (0.011s)
+2025-09-09T16:38:13.4940331Z 
+2025-09-09T16:38:13.4972670Z == 20250910-add-dibuat_pada-to-inventaris_master: migrating =======
+2025-09-09T16:38:13.5039895Z == 20250910-add-dibuat_pada-to-inventaris_master: migrated (0.006s)
+2025-09-09T16:38:13.5040336Z 
+2025-09-09T16:38:13.5071820Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:13.5088892Z 
+2025-09-09T16:38:13.5091691Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:13.5092505Z 
+2025-09-09T16:38:16.0265920Z 
+2025-09-09T16:38:16.0271824Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:16.0272752Z 
+2025-09-09T16:38:16.0500601Z [dotenv@17.2.2] injecting env (6) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-09-09T16:38:16.0503557Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:16.0504336Z Using environment "test".
+2025-09-09T16:38:16.1595537Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:16.1620647Z 
+2025-09-09T16:38:16.1623541Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:16.1624694Z 
+2025-09-09T16:38:20.6647294Z 
+2025-09-09T16:38:20.6654412Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:20.6654928Z 
+2025-09-09T16:38:20.6898104Z [dotenv@17.2.2] injecting env (6) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2025-09-09T16:38:20.6901411Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:20.6902154Z Using environment "test".
+2025-09-09T16:38:20.7962917Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:20.7986494Z 
+2025-09-09T16:38:20.7989556Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:20.7990360Z 
+2025-09-09T16:38:27.3129191Z 
+2025-09-09T16:38:27.3135241Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:27.3135731Z 
+2025-09-09T16:38:27.3343588Z [dotenv@17.2.2] injecting env (6) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2025-09-09T16:38:27.3346961Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:27.3347554Z Using environment "test".
+2025-09-09T16:38:27.4412328Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:27.4435275Z 
+2025-09-09T16:38:27.4437888Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:27.4438694Z 
+2025-09-09T16:38:35.9516963Z 
+2025-09-09T16:38:35.9522502Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:35.9522975Z 
+2025-09-09T16:38:35.9735077Z [dotenv@17.2.2] injecting env (6) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2025-09-09T16:38:35.9738407Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:35.9739244Z Using environment "test".
+2025-09-09T16:38:36.0818245Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:36.0840234Z 
+2025-09-09T16:38:36.0843030Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:36.0844058Z 

@@ -1,0 +1,20 @@
+﻿2025-09-09T16:38:46.1032409Z ##[group]Run cd be
+2025-09-09T16:38:46.1032663Z [36;1mcd be[0m
+2025-09-09T16:38:46.1032851Z [36;1mnpm test[0m
+2025-09-09T16:38:46.1062825Z shell: /usr/bin/bash -e {0}
+2025-09-09T16:38:46.1063072Z ##[endgroup]
+2025-09-09T16:38:46.2209997Z 
+2025-09-09T16:38:46.2210607Z > eezee-kedai-backend@1.0.0 test
+2025-09-09T16:38:46.2211321Z > npx sequelize-cli db:migrate && jest --runInBand
+2025-09-09T16:38:46.2214986Z 
+2025-09-09T16:38:46.7219463Z 
+2025-09-09T16:38:46.7220694Z [4mSequelize CLI [Node: 20.19.5, CLI: 6.6.3, ORM: 6.37.7][24m
+2025-09-09T16:38:46.7221216Z 
+2025-09-09T16:38:46.7391781Z [dotenv@17.2.2] injecting env (6) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2025-09-09T16:38:46.7395105Z Loaded configuration file "config/sequelize-config.js".
+2025-09-09T16:38:46.7395816Z Using environment "test".
+2025-09-09T16:38:46.8494399Z == 20250911-template-add-column-idempotent: migrating =======
+2025-09-09T16:38:46.8513995Z 
+2025-09-09T16:38:46.8517490Z [31mERROR:[39m No description found for "MyTable" table. Check the table name and schema; remember, they _are_ case sensitive.
+2025-09-09T16:38:46.8518941Z 
+2025-09-09T16:38:46.8741894Z ##[error]Process completed with exit code 1.

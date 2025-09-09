@@ -7950,3 +7950,38 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - Kedai deleted: 4d024cd6-6f0a-4d3a-ab42-9eac3c2b7889
 
+
+### 2025-09-09 23:32:12 WIB — INFO
+
+- Added migration idempotent guide and example template; pushed directly to main
+
+- meta: {"action":"docs:add-migration-guidelines","files":["docs/migration-idempotent.md","be/migrations/20250911-template-add-column-idempotent.js"]}
+
+
+### 2025-09-09 23:33:56 WIB — INFO
+
+- Scanned migrations for risky DDL operations; only found add/remove column migration (already fixed) and template
+
+- meta: {"action":"scan:migrations","files":["be/migrations/*"]}
+
+
+### 2025-09-09 23:36:00 WIB — INFO
+
+- Added idempotent change/rename migration docs and template; pushed to main
+
+- meta: {"action":"docs:add-change-rename-templates","files":["docs/migration-idempotent.md","be/migrations/20250912-template-change-rename-idempotent.js"]}
+
+
+### 2025-09-09 23:37:58 WIB — INFO
+
+- Added migration linter and CI workflow step; lint passes locally and changes pushed to main
+
+- meta: {"action":"ci:add-migration-linter","files":["be/scripts/lint_migrations.js","be/package.json",".github/workflows/ci.yml"]}
+
+
+### 2025-09-09 23:41:43 WIB — INFO
+
+- Made migration templates tolerant (try/catch) and pushed to main; lint passes locally
+
+- meta: {"action":"docs:fix-templates-trycatch","files":["be/migrations/20250911-template-add-column-idempotent.js","be/migrations/20250912-template-change-rename-idempotent.js"]}
+

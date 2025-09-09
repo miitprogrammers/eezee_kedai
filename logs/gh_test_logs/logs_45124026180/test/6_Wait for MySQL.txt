@@ -1,0 +1,4 @@
+﻿2025-09-09T16:38:11.8083438Z ##[group]Run for i in {1..30}; do mysqladmin ping -h 127.0.0.1 -P 3306 --silent && break || sleep 2; done
+2025-09-09T16:38:11.8084378Z [36;1mfor i in {1..30}; do mysqladmin ping -h 127.0.0.1 -P 3306 --silent && break || sleep 2; done[0m
+2025-09-09T16:38:11.8119740Z shell: /usr/bin/bash -e {0}
+2025-09-09T16:38:11.8120025Z ##[endgroup]

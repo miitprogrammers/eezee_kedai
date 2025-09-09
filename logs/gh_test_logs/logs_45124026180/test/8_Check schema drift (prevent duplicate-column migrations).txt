@@ -1,0 +1,13 @@
+﻿2025-09-09T16:38:12.2270638Z ##[group]Run cd be
+2025-09-09T16:38:12.2270856Z [36;1mcd be[0m
+2025-09-09T16:38:12.2271046Z [36;1mnpm run lint:migrations[0m
+2025-09-09T16:38:12.2271297Z [36;1mnode scripts/check_schema_drift.js[0m
+2025-09-09T16:38:12.2298506Z shell: /usr/bin/bash -e {0}
+2025-09-09T16:38:12.2298736Z ##[endgroup]
+2025-09-09T16:38:12.3490599Z 
+2025-09-09T16:38:12.3491501Z > eezee-kedai-backend@1.0.0 lint:migrations
+2025-09-09T16:38:12.3493305Z > node scripts/lint_migrations.js
+2025-09-09T16:38:12.3493646Z 
+2025-09-09T16:38:12.3777158Z Migration lint passed: no suspicious addColumn found.
+2025-09-09T16:38:12.5304856Z [dotenv@17.2.2] injecting env (6) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+2025-09-09T16:38:12.6568515Z No schema-drift conflicts detected for addColumn operations.
