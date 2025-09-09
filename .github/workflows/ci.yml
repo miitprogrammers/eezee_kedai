@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: eezee_kedai_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          cd be
+          npm ci
+
+      - name: Wait for MySQL
+        run: |
+          for i in {1..30}; do mysqladmin ping -h 127.0.0.1 -P 3306 --silent && break || sleep 2; done
+
+      - name: Configure DB env
+        run: |
+          cd be
+          echo "DB_HOST=127.0.0.1" > .env
+          echo "DB_USER=root" >> .env
+          echo "DB_PASS=root" >> .env
+          echo "DB_NAME=eezee_kedai_test" >> .env
+
+      - name: Run migrations
+        run: |
+          cd be
+          npx sequelize-cli db:migrate --env development
+
+      - name: Run tests
+        run: |
+          cd be
+          npm test

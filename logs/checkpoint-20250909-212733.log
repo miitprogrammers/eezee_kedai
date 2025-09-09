@@ -1,0 +1,525 @@
+--- ATTEMPT 1 ---
+[0mPOST /api/mgmt/kedai [32m201[0m 53.258 ms - 147[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 9.415 ms - 217[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 8.201 ms - 138[0m
+[0mPOST /api/inventory/tx/stock-in [31m500[0m 28.223 ms - 30[0m
+[0mDELETE /api/mgmt/cabang/d79a6e04-cb99-4cac-96f0-79537f9cf9b8 [32m200[0m 8.089 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/0fbd33ee-0eb8-4f25-bdaa-8ef1c4c43f3d [32m200[0m 7.134 ms - 16[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 5.401 ms - 148[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 5.133 ms - 140[0m
+[0mPOST /api/inventory/tx/stock-in [33m422[0m 3.025 ms - 141[0m
+[0mDELETE /api/mgmt/kedai/a3d5f166-8971-4fd8-93e0-d767e95876c4 [32m200[0m 6.651 ms - 16[0m
+[0mPOST /api/mgmt/kedai [33m422[0m 2.269 ms - 174[0m
+[0mPOST /api/mgmt/cabang [33m422[0m 1.651 ms - 94[0m
+[0mPOST /api/mgmt/pengguna [33m422[0m 2.493 ms - 410[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 22.498 ms - 147[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 6.293 ms - 217[0m
+[0mPOST /api/mgmt/pengguna [32m201[0m 72.125 ms - 89[0m
+[0mPOST /api/mgmt/pengguna [33m400[0m 110.493 ms - 28[0m
+[0mDELETE /api/mgmt/pengguna/6647e9e1-6374-4d1e-bc0b-ab9d5d400aaa [32m200[0m 7.047 ms - 16[0m
+[0mDELETE /api/mgmt/cabang/137ea479-6b4b-4017-9510-6b1dc26c4071 [32m200[0m 6.705 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/900de821-d14a-47a1-9f7c-3170c9dbf25e [32m200[0m 6.237 ms - 16[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 19.787 ms - 147[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 5.912 ms - 217[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 4.275 ms - 138[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 78.362 ms - 11[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 148.192 ms - 11[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 149.084 ms - 11[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 157.581 ms - 11[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 165.928 ms - 11[0m
+[0mGET /api/inventory/stok?item_id=item-con-1757428048674&cabang_id=e6d8d18c-f261-487c-b825-2a98e080fb68 [32m200[0m 1.859 ms - 233[0m
+[0mDELETE /api/mgmt/cabang/e6d8d18c-f261-487c-b825-2a98e080fb68 [32m200[0m 5.557 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/86e760dd-5089-4421-ac36-93b504c405dc [32m200[0m 6.069 ms - 16[0m
+[0mPOST /api/auth/register [33m400[0m 136.921 ms - 28[0m
+[0mPOST /api/auth/login [32m200[0m 70.300 ms - 387[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 28.897 ms - 147[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 5.855 ms - 217[0m
+[0mPOST /api/mgmt/pengguna [32m201[0m 69.830 ms - 89[0m
+[0mGET /api/mgmt/pengguna/7cf4507b-03ac-43c3-bfdd-63bc72b77529 [32m200[0m 4.083 ms - 295[0m
+[0mPUT /api/mgmt/pengguna/7cf4507b-03ac-43c3-bfdd-63bc72b77529 [32m200[0m 6.534 ms - 16[0m
+[0mDELETE /api/mgmt/pengguna/7cf4507b-03ac-43c3-bfdd-63bc72b77529 [32m200[0m 6.316 ms - 16[0m
+[0mDELETE /api/mgmt/cabang/73a75a2e-ce00-4a5e-9fb4-e3757e524476 [32m200[0m 5.220 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/2257f812-affc-4c4a-898e-0d9f45117a3b [32m200[0m 5.304 ms - 16[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 36.826 ms - 147[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 6.353 ms - 217[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 5.320 ms - 138[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 11.015 ms - 11[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 9.572 ms - 11[0m
+[0mGET /api/inventory/stok?item_id=item-hpp-1757428050849&cabang_id=7df8ecc8-f0a5-4662-a1a2-6681022769a4 [32m200[0m 1.529 ms - 233[0m
+[0mDELETE /api/mgmt/cabang/7df8ecc8-f0a5-4662-a1a2-6681022769a4 [32m200[0m 6.354 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/ff62c017-6290-4e2b-a7eb-2507851b5e32 [32m200[0m 6.833 ms - 16[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 4.685 ms - 146[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 6.189 ms - 216[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 4.176 ms - 136[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 7.484 ms - 11[0m
+[0mGET /api/inventory/stok?item_id=item-so-1757428050849&cabang_id=383c8716-25a6-40b9-b79e-5667ca5f37cb [32m200[0m 1.406 ms - 231[0m
+[0mDELETE /api/mgmt/cabang/383c8716-25a6-40b9-b79e-5667ca5f37cb [32m200[0m 5.462 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/1eb065d0-2c5d-46bf-937a-08ea43ef1859 [32m200[0m 6.152 ms - 16[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 21.362 ms - 149[0m
+[0mPOST /api/mgmt/cabang [32m201[0m 6.607 ms - 219[0m
+[0mPOST /api/inventory/inventaris [32m201[0m 5.038 ms - 135[0m
+[0mPOST /api/inventory/tx/stock-in [32m200[0m 12.612 ms - 11[0m
+[0mGET /api/inventory/stok?item_id=item-1757428051674&cabang_id=32a10983-e07e-44e3-ab43-21aced1a55bf [32m200[0m 1.867 ms - 230[0m
+[0mPOST /api/inventory/tx/stock-in [33m422[0m 1.738 ms - 261[0m
+[0mPOST /api/inventory/tx/stock-in [33m422[0m 1.780 ms - 199[0m
+[0mDELETE /api/mgmt/cabang/32a10983-e07e-44e3-ab43-21aced1a55bf [32m200[0m 5.390 ms - 16[0m
+[0mDELETE /api/mgmt/kedai/466a8f3f-1808-41a9-a5d8-bdea89f6bbc3 [32m200[0m 5.858 ms - 16[0m
+[0mPOST /api/mgmt/kedai [33m403[0m 13.503 ms - 21[0m
+[0mPOST /api/mgmt/kedai [32m201[0m 19.121 ms - 134[0m
+[0mPOST /api/auth/register [33m422[0m 1.232 ms - 315[0m
+[0mGET /api/mgmt/kedai [33m401[0m 11.752 ms - 29[0m
+
+PASS tests/stockTransaction_negative.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:26"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 0fbd33ee-0eb8-4f25-bdaa-8ef1c4c43f3d {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: d79a6e04-cb99-4cac-96f0-79537f9cf9b8 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-neg-1757428047030 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      error: Stock IN failed {"details":{"how":"stockIn","plan":"retry"},"error":"Error: simulated db error\n    at Function.<anonymous> (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\tests\\stockTransaction_negative.test.js:34:15)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jest-mock\\build\\index.js:397:39\n    at Function.<anonymous> (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jest-mock\\build\\index.js:404:13)\n    at Function.mockConstructor [as create] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jest-mock\\build\\index.js:148:19)\n    at create (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\controllers\\stockTransactionController.js:43:27)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: d79a6e04-cb99-4cac-96f0-79537f9cf9b8 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 0fbd33ee-0eb8-4f25-bdaa-8ef1c4c43f3d {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: a3d5f166-8971-4fd8-93e0-d767e95876c4 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-neg2-1757428047030 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: a3d5f166-8971-4fd8-93e0-d767e95876c4 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/e2e_negative.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 900de821-d14a-47a1-9f7c-3170c9dbf25e {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: 137ea479-6b4b-4017-9510-6b1dc26c4071 {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Pengguna created: 6647e9e1-6374-4d1e-bc0b-ab9d5d400aaa {"details":null,"timestamp":"2025-09-09 21:27:27"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      error: Pengguna create failed {"details":{"how":"createPengguna"},"error":"Error: \n    at Query.run (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\sequelize\\src\\dialects\\mysql\\query.js:46:25)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\sequelize\\src\\sequelize.js:650:28\n    at MySQLQueryInterface.insert (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:795:21)\n    at model.save (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\sequelize\\src\\model.js:4154:35)\n    at Function.create (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\sequelize\\src\\model.js:2305:12)\n    at createPengguna (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\controllers\\penggunaController.js:10:15)","timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Pengguna deleted: 6647e9e1-6374-4d1e-bc0b-ab9d5d400aaa {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: 137ea479-6b4b-4017-9510-6b1dc26c4071 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 900de821-d14a-47a1-9f7c-3170c9dbf25e {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/stockTransaction_concurrency.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 86e760dd-5089-4421-ac36-93b504c405dc {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: e6d8d18c-f261-487c-b825-2a98e080fb68 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-con-1757428048674 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-con-1757428048674@e6d8d18c-f261-487c-b825-2a98e080fb68 +10 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-con-1757428048674@e6d8d18c-f261-487c-b825-2a98e080fb68 +10 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-con-1757428048674@e6d8d18c-f261-487c-b825-2a98e080fb68 +10 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-con-1757428048674@e6d8d18c-f261-487c-b825-2a98e080fb68 +10 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-con-1757428048674@e6d8d18c-f261-487c-b825-2a98e080fb68 +10 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: e6d8d18c-f261-487c-b825-2a98e080fb68 {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 86e760dd-5089-4421-ac36-93b504c405dc {"details":null,"timestamp":"2025-09-09 21:27:28"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/auth.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:29"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Auth: register failed Validation error {"details":null,"timestamp":"2025-09-09 21:27:29"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Auth: login testuser+ci@test.local {"details":null,"timestamp":"2025-09-09 21:27:29"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/e2e_crud.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 2257f812-affc-4c4a-898e-0d9f45117a3b {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: 73a75a2e-ce00-4a5e-9fb4-e3757e524476 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Pengguna created: 7cf4507b-03ac-43c3-bfdd-63bc72b77529 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Pengguna updated: 7cf4507b-03ac-43c3-bfdd-63bc72b77529 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Pengguna deleted: 7cf4507b-03ac-43c3-bfdd-63bc72b77529 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: 73a75a2e-ce00-4a5e-9fb4-e3757e524476 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 2257f812-affc-4c4a-898e-0d9f45117a3b {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/stockTransaction_extra.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: ff62c017-6290-4e2b-a7eb-2507851b5e32 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: 7df8ecc8-f0a5-4662-a1a2-6681022769a4 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-hpp-1757428050849 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-hpp-1757428050849@7df8ecc8-f0a5-4662-a1a2-6681022769a4 +10 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-hpp-1757428050849@7df8ecc8-f0a5-4662-a1a2-6681022769a4 +5 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: 7df8ecc8-f0a5-4662-a1a2-6681022769a4 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: ff62c017-6290-4e2b-a7eb-2507851b5e32 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 1eb065d0-2c5d-46bf-937a-08ea43ef1859 {"details":null,"timestamp":"2025-09-09 21:27:30"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: 383c8716-25a6-40b9-b79e-5667ca5f37cb {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-so-1757428050849 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-so-1757428050849@383c8716-25a6-40b9-b79e-5667ca5f37cb +20 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: 383c8716-25a6-40b9-b79e-5667ca5f37cb {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 1eb065d0-2c5d-46bf-937a-08ea43ef1859 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/stockTransaction.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 466a8f3f-1808-41a9-a5d8-bdea89f6bbc3 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang created: 32a10983-e07e-44e3-ab43-21aced1a55bf {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: InventarisMaster created: item-1757428051674 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Stock IN processed: item-1757428051674@32a10983-e07e-44e3-ab43-21aced1a55bf +10 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Cabang deleted: 32a10983-e07e-44e3-ab43-21aced1a55bf {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai deleted: 466a8f3f-1808-41a9-a5d8-bdea89f6bbc3 {"details":null,"timestamp":"2025-09-09 21:27:31"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/rbac.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:32"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      error: RBAC: forbidden {"details":{"how":"requireRole","plan":"allowed: Pemilik"},"error":"Error: Forbidden: insufficient role\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\middleware\\requireRole.js:10:21\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\middleware\\verifyToken.js:30:5)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jsonwebtoken\\verify.js:261:12\n    at getSecret (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jsonwebtoken\\verify.js:97:14)\n    at Object.<anonymous>.module.exports [as verify] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\jsonwebtoken\\verify.js:101:10)\n    at verify (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\middleware\\verifyToken.js:20:7)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express-fileupload\\lib\\index.js:38:14\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at logger (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\morgan\\index.js:144:5)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at urlencodedParser (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\body-parser\\lib\\types\\urlencoded.js:57:7)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\body-parser\\lib\\read.js:132:5\n    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)\n    at invokeCallback (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\raw-body\\index.js:238:16)\n    at done (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-09-09 21:27:32"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      info: Kedai created: 8835d3bf-1052-4590-be7f-92761e13ad16 {"details":null,"timestamp":"2025-09-09 21:27:32"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+PASS tests/auth_validation.test.js
+  ● Console
+
+    console.log
+      [dotenv@17.2.2] injecting env (8) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+
+      at _log (node_modules/dotenv/lib/main.js:139:11)
+
+    console.log
+      info: Server started at http://192.168.1.188:5151 {"details":null,"timestamp":"2025-09-09 21:27:32"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+    console.log
+      error: Auth: missing token {"details":{"how":"verifyToken","plan":"provide Authorization header"},"error":"Error: No token provided\n    at verifyToken (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\middleware\\verifyToken.js:10:14)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express-fileupload\\lib\\index.js:38:14\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at logger (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\morgan\\index.js:144:5)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at urlencodedParser (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\body-parser\\lib\\types\\urlencoded.js:68:7)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at jsonParser (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\body-parser\\lib\\types\\json.js:100:7)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at cors (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:188:7)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:224:17\n    at originCallback (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:214:15)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:219:13\n    at optionsCallback (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:199:9)\n    at corsMiddleware (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\cors\\lib\\index.js:204:7)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at expressInit (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\middleware\\init.js:40:5)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at query (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\middleware\\query.js:45:5)\n    at Layer.handle [as handle_request] (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:286:9\n    at Function.process_params (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at Function.handle (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\application.js:181:10)\n    at Server.app (F:\\MIIT2024\\PROJECTS\\eezeeKedai_t2\\be\\node_modules\\express\\lib\\express.js:39:9)\n    at Server.emit (node:events:518:28)\n    at parserOnIncoming (node:_http_server:1153:12)\n    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)","timestamp":"2025-09-09 21:27:32"}
+
+      at Console.log (node_modules/winston/lib/winston/transports/console.js:87:23)
+
+
+Test Suites: 9 passed, 9 total
+Tests:       22 passed, 22 total
+Snapshots:   0 total
+Time:        8.748 s, estimated 9 s
+Ran all test suites.
+

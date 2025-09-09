@@ -1,0 +1,360 @@
+Dokumentasi Teknis Web Aplikasi Eezee Kedai
+1. Ringkasan Proyek
+Eezee Kedai adalah sebuah web aplikasi manajemen kedai yang berorientasi objek (OOP) dan berfungsi sebagai Progressive Web App (PWA). Aplikasi ini dirancang untuk multi-pengguna dan multi-cabang, dengan fokus pada pengalaman pengguna yang ringan dan responsif, terutama untuk perangkat low-end.
+2. Tumpukan Teknologi (Technology Stack)
+Backend: Node.js
+Frontend: Vuetify (berbasis Vue.js)
+Database: MySQL
+Arsitektur: Object-Oriented Programming (OOP)
+Deployment: Progressive Web App (PWA)
+3. Model Data (Conceptual Schema)
+Aplikasi ini akan menggunakan beberapa tabel/entitas utama yang saling terhubung. Semua ID akan menggunakan tipe data UUID untuk memastikan keunikan secara global, menghindari konflik ID dalam lingkungan multi-cabang.
+Entitas Kedai
+kedai_id (PK, VARCHAR(36))
+nama_kedai (VARCHAR(255), NOT NULL)
+alamat (VARCHAR(500))
+deskripsi (TEXT)
+is_aktif (BOOLEAN, DEFAULT TRUE)
+dibuat_pada (DATETIME, NOT NULL)
+Entitas LanggananKedai
+langganan_id (PK, VARCHAR(36))
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+tipe_langganan (ENUM('Basic', 'Pro'), NOT NULL)
+tanggal_mulai (DATETIME, NOT NULL)
+tanggal_berakhir (DATETIME, NOT NULL)
+status_langganan (ENUM('Aktif', 'Kadaluarsa'), NOT NULL)
+dibuat_pada (DATETIME, NOT NULL)
+Entitas Cabang
+cabang_id (PK, VARCHAR(36))
+nama_cabang (VARCHAR(255), NOT NULL)
+alamat (VARCHAR(500))
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+is_utama (BOOLEAN, DEFAULT FALSE)
+is_aktif (BOOLEAN, DEFAULT TRUE)
+dibuat_pada (DATETIME, NOT NULL)
+Entitas Pengguna
+user_id (PK, VARCHAR(36))
+nama_lengkap (VARCHAR(255), NOT NULL)
+email (VARCHAR(255), NOT NULL, UNIQUE)
+password (VARCHAR(255), NOT NULL)
+peran (ENUM('Pemilik', 'Manajer', 'Kasir'), NOT NULL, Terhubung ke tabel hakPeran)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+cabang_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Cabang)
+dibuat_pada (DATETIME, NOT NULL)
+terakhir_login (DATETIME)
+Entitas hakPeran
+peran_id (PK, VARCHAR(36))
+nama_peran (ENUM('Pemilik', 'Manajer', 'Kasir'), NOT NULL, UNIQUE)
+hak_akses (JSON, NOT NULL, Berisi array dari ID menu/fitur yang diizinkan. Contoh: ["kelola-menu", "lihat-laporan"])
+is_default (BOOLEAN, DEFAULT TRUE)
+Entitas InventarisMaster (Master Bahan Baku di Level Kedai)
+item_id (PK, VARCHAR(36))
+nama_item (VARCHAR(255), NOT NULL)
+unit (VARCHAR(50), NOT NULL)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+is_aktif (BOOLEAN, DEFAULT TRUE)
+Entitas HistoriInventaris (Log Pergerakan Stok per Cabang)
+log_id (PK, VARCHAR(36))
+tanggal (DATETIME, NOT NULL)
+item_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel InventarisMaster)
+jumlah (INT, NOT NULL, Nilai positif untuk penambahan stok, negatif untuk pengurangan)
+harga_beli (DECIMAL(10, 2), NOT NULL)
+cabang_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Cabang)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+tipe_transaksi (ENUM('Pembelian', 'Penjualan'), NOT NULL)
+Entitas StokSaatIni (Stok Terkini per Cabang)
+stok_id (PK, VARCHAR(36))
+item_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel InventarisMaster)
+cabang_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Cabang)
+stok_saat_ini (INT, NOT NULL, Nilai stok aktual saat ini)
+harga_rata_rata (DECIMAL(10, 2), NOT NULL, Nilai rata-rata tertimbang dari semua pembelian)
+terakhir_diperbarui (DATETIME, NOT NULL)
+Entitas Menu
+menu_id (PK, VARCHAR(36))
+nama_menu (VARCHAR(255), NOT NULL)
+harga_jual (DECIMAL(10, 2), NOT NULL)
+deskripsi (TEXT)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+is_aktif (BOOLEAN, DEFAULT TRUE)
+dibuat_pada (DATETIME, NOT NULL)
+Entitas Resep
+resep_id (PK, VARCHAR(36))
+menu_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Menu)
+item_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel InventarisMaster)
+jumlah_pemakaian (FLOAT, NOT NULL, berapa banyak item_id yang dibutuhkan untuk membuat satu menu_id)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+Entitas Transaksi
+transaksi_id (PK, VARCHAR(36))
+tanggal (DATETIME, NOT NULL)
+total_harga (DECIMAL(10, 2), NOT NULL)
+user_id (FK, VARCHAR(36), NOT NULL, Kasir yang melakukan transaksi)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+cabang_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Cabang)
+Entitas DetailTransaksi
+detail_id (PK, VARCHAR(36))
+transaksi_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Transaksi)
+menu_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Menu)
+jumlah (INT, NOT NULL)
+harga_per_item (DECIMAL(10, 2), NOT NULL)
+Entitas RingkasanHarian
+ringkasan_id (PK, VARCHAR(36))
+tanggal (DATE, NOT NULL, UNIK)
+total_pendapatan (DECIMAL(10, 2), NOT NULL)
+total_hpp (DECIMAL(10, 2), NOT NULL)
+jumlah_transaksi (INT, NOT NULL)
+cabang_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Cabang)
+kedai_id (FK, VARCHAR(36), NOT NULL, Terhubung ke tabel Kedai)
+4. Struktur Proyek Backend (Lengkap)
+Berikut adalah struktur direktori yang terperinci untuk proyek backend Node.js ini.
+eezee-kedai-backend/
+├── config/ # Pengaturan konfigurasi aplikasi
+│ ├── database.js # Konfigurasi koneksi ke database MySQL
+│ ├── constants.js # Variabel konstan, seperti role, nama, dsb
+│ └── index.js # Mengelola konfigurasi dari file-file di dalamnya
+├── controllers/ # Menangani permintaan HTTP (req, res)
+│ ├── authController.js # Logika untuk login & registrasi
+│ ├── cabangController.js # Logika untuk manajemen cabang
+│ ├── kedaiController.js # Logika untuk manajemen kedai
+│ ├── laporanController.js # Logika untuk laporan & ringkasan
+│ ├── langgananController.js # Logika untuk manajemen langganan
+│ ├── menuController.js # Logika untuk manajemen menu & resep
+│ ├── penggunaController.js# Logika untuk manajemen pengguna & peran
+│ └── transaksiController.js # Logika untuk transaksi & stok
+├── models/ # Representasi tabel database (Object-Oriented)
+│ ├── Cabang.js
+│ ├── DetailTransaksi.js
+│ ├── HakPeran.js
+│ ├── HistoriInventaris.js
+│ ├── InventarisMaster.js
+│ ├── Kedai.js
+│ ├── LanggananKedai.js
+│ ├── Menu.js
+│ ├── Pengguna.js
+│ ├── Resep.js
+│ ├── RingkasanHarian.js
+│ ├── StokSaatIni.js
+│ └── Transaksi.js
+├── middlewares/ # Fungsi yang berjalan di antara req & res
+│ ├── authMiddleware.js # Verifikasi JWT token
+│ ├── permissionMiddleware.js # Cek hak akses & peran
+│ └── errorHandler.js # Middleware untuk menangani error
+├── routes/ # Mengelola endpoint API
+│ ├── api/ # Endpoint utama
+│ │ ├── authRoutes.js
+│ │ ├── cabangRoutes.js
+│ │ ├── kedaiRoutes.js
+│ │ ├── laporanRoutes.js
+│ │ ├── langgananRoutes.js
+│ │ ├── menuRoutes.js
+│ │ ├── penggunaRoutes.js
+│ │ └── transaksiRoutes.js
+│ └── index.js # Mengelola semua rute API
+├── services/ # Logika bisnis yang kompleks, dipisahkan dari controller
+│ ├── authService.js
+│ ├── transaksiService.js
+│ ├── laporanService.js
+│ └── ... # Service untuk fitur lain
+├── utils/ # Fungsi-fungsi bantu
+│ ├── passwordUtils.js # Hashing password dengan bcrypt
+│ ├── tokenUtils.js # Fungsi untuk JWT
+│ └── databaseUtils.js # Fungsi bantu terkait database
+├── .env.example # Contoh file variabel lingkungan
+├── .env # Variabel lingkungan aktual
+├── .gitignore # File yang diabaikan oleh Git
+├── package.json # Dependensi proyek & skrip
+├── server.js # Entry point aplikasi utama
+└── README.md # Dokumentasi proyek
+5. Rincian Fitur
+5.1. Manajemen Kedai
+Deskripsi: Mengelola informasi dasar kedai, seperti nama, alamat, dan deskripsi.
+Backend API:
+GET /api/kedai/{kedai_id}: Mengambil data kedai.
+PUT /api/kedai/{kedai_id}: Memperbarui data kedai.
+Frontend Komponen:
+KomponenProfilKedai.vue: Menampilkan data kedai.
+KomponenFormEditKedai.vue: Form untuk mengedit informasi.
+5.2. Manajemen Langganan
+Deskripsi: Mengelola status langganan kedai. Membatasi akses ke fitur Pro jika tidak aktif.
+Backend API:
+GET /api/langganan/{kedai_id}: Mengambil status langganan.
+POST /api/langganan/upgrade: Logika untuk memproses peningkatan langganan.
+Frontend Komponen:
+KomponenLangganan.vue: Menampilkan status langganan dan opsi upgrade.
+5.3. Manajemen Cabang
+Deskripsi: Menambah, mengedit, atau menonaktifkan cabang. Hanya tersedia untuk langganan Pro.
+Backend API:
+GET /api/cabang: Mengambil daftar cabang.
+POST /api/cabang: Membuat cabang baru.
+PUT /api/cabang/{cabang_id}: Memperbarui data cabang.
+DELETE /api/cabang/{cabang_id}: Menonaktifkan cabang.
+Frontend Komponen:
+HalamanManajemenCabang.vue: Tampilan tabel data cabang.
+KomponenModalCabang.vue: Modal form untuk membuat/mengedit cabang.
+5.4. Manajemen Pengguna & Peran
+Deskripsi: Mengelola akses pengguna dan peran. Hanya tersedia untuk langganan Pro.
+Backend API:
+GET /api/pengguna: Mengambil daftar pengguna.
+POST /api/pengguna: Membuat pengguna baru.
+PUT /api/pengguna/{user_id}: Memperbarui data pengguna dan peran.
+Frontend Komponen:
+HalamanManajemenPengguna.vue: Tampilan tabel data pengguna.
+KomponenModalPengguna.vue: Modal form untuk membuat/mengedit pengguna.
+5.5. Manajemen Inventaris
+Deskripsi: Mencatat dan memperbarui stok bahan baku.
+Backend API:
+GET /api/inventaris: Mengambil daftar InventarisMaster.
+GET /api/inventaris/stok: Mengambil StokSaatIni per cabang.
+POST /api/inventaris/pembelian: Menambah stok.
+Frontend Komponen:
+HalamanInventaris.vue: Tampilan tabel InventarisMaster dan StokSaatIni.
+KomponenModalPembelian.vue: Form untuk mencatat pembelian.
+5.6. Manajemen Menu & Resep
+Deskripsi: Mengatur daftar menu dan resep.
+Backend API:
+GET /api/menu: Mengambil daftar menu.
+POST /api/menu: Membuat menu baru beserta resepnya.
+PUT /api/menu/{menu_id}: Memperbarui menu dan resep.
+Frontend Komponen:
+HalamanMenu.vue: Tampilan daftar menu.
+KomponenModalMenu.vue: Form untuk membuat/mengedit menu.
+5.7. Tampilan Kasir
+Deskripsi: Antarmuka untuk memproses transaksi penjualan.
+Backend API:
+POST /api/transaksi: Merekam transaksi penjualan.
+Frontend Komponen:
+HalamanKasir.vue: Antarmuka utama kasir.
+KomponenKeranjang.vue: Keranjang belanja.
+5.8. Laporan Transaksi
+Deskripsi: Menyajikan laporan harian dan bulanan.
+Backend API:
+GET /api/laporan/harian: Laporan harian.
+GET /api/laporan/bulanan: Laporan bulanan.
+Frontend Komponen:
+HalamanLaporan.vue: Tampilan laporan dengan filter.
+5.9. Sistem Login & Registrasi
+Deskripsi: Mengelola pendaftaran pengguna baru, login, dan logout.
+Backend API:
+POST /api/auth/register: Mendaftarkan pengguna baru.
+POST /api/auth/login: Mengautentikasi pengguna dan memberikan token.
+POST /api/auth/logout: Membersihkan token sesi.
+Frontend Komponen:
+HalamanLogin.vue: Form untuk memasukkan email dan password.
+HalamanRegistrasi.vue: Form untuk pendaftaran pengguna baru.
+6. Logika Teknis yang Mendalam
+6.1. Alur Transaksi dan Pengurangan Stok
+Ini adalah alur kritis yang harus diimplementasikan sebagai satu database transaction untuk menjamin integritas data.
+Endpoint: POST /api/transaksi
+Payload (JSON Request Body):
+{ "kedai_id": "uuid-kedai-123", "cabang_id": "uuid-cabang-456", "user_id": "uuid-user-789", "items": [ { "menu_id": "uuid-menu-111", "jumlah": 2 }, { "menu_id": "uuid-menu-222", "jumlah": 1 } ]}
+Logika Backend:
+Validasi Permintaan: Validasi token JWT dan pastikan pengguna memiliki hak akses untuk transaksi.
+Mulai Transaction: Gunakan db.beginTransaction() atau metode serupa di sequelize atau ORM lainnya.
+Rekam Transaksi: INSERT data ke tabel Transaksi dan DetailTransaksi.
+Kurangi Stok:
+Untuk setiap item di payload.items:
+Ambil resep (jumlah_pemakaian) dari tabel Resep.
+Ambil stok saat ini (stok_saat_ini) dan harga_rata_rata dari tabel StokSaatIni.
+UPDATE StokSaatIni SET stok_saat_ini = stok_saat_ini - (jumlah_pemakaian * jumlah), terakhir_diperbarui = NOW() WHERE item_id = '{item_id}' AND cabang_id = '{cabang_id}'.
+INSERT INTO HistoriInventaris (tanggal, item_id, jumlah, harga_beli, cabang_id, kedai_id, tipe_transaksi) VALUES (NOW(), '{item_id}', -(jumlah_pemakaian * jumlah), '{harga_rata_rata}', '{cabang_id}', '{kedai_id}', 'Penjualan').
+Akhiri Transaction: Jika semua berhasil, db.commit(). Jika ada kesalahan, db.rollback().
+Respon: Kirim 201 Created jika sukses atau 400 Bad Request jika gagal.
+6.2. Logika Perhitungan HPP (Harga Pokok Penjualan)
+Logika ini akan menggunakan metode Weighted Average Cost untuk perhitungan harga rata-rata bahan baku.
+Endpoint: GET /api/menu/{menu_id}/hpp
+Query Params: cabang_id
+Logika Backend:
+Ambil menu_id dari URL params dan cabang_id dari query string.
+Lakukan kueri JOIN untuk menghitung HPP.
+SELECT SUM(r.jumlah_pemakaian * s.harga_rata_rata) AS hpp FROM Resep AS r JOIN StokSaatIni AS s ON r.item_id = s.item_id WHERE r.menu_id = '{menu_id}' AND s.cabang_id = '{cabang_id}';
+Respon: Kirim 200 OK dengan nilai HPP dalam format JSON.
+6.3. Manajemen State Frontend (Vuex/Pinia)
+Tujuan: Mengelola data global untuk menghindari panggilan API berulang.
+Implementasi:
+Store Auth: Simpan user_id, peran, dan hak_akses setelah login.
+Store Menu: Simpan daftar menu dan resep.
+Store Inventaris: Simpan data StokSaatIni.
+Store Transaksi: Simpan keranjang belanja (cart) sebelum dikirim ke backend.
+6.4. Logika Laporan Transaksi
+Endpoint Laporan Harian: GET /api/laporan/harian
+Query Params: tanggal=yyyy-mm-dd, cabang_id
+Logika Backend: SELECT SUM(total_harga) AS total_pendapatan, COUNT(transaksi_id) AS jumlah_transaksi FROM Transaksi WHERE DATE(tanggal) = '{tanggal}' AND cabang_id = '{cabang_id}';
+Endpoint Laporan Bulanan: GET /api/laporan/bulanan
+Query Params: bulan=mm, tahun=yyyy, cabang_id
+Logika Backend: SELECT SUM(total_harga) AS total_pendapatan, DAY(tanggal) AS hari FROM Transaksi WHERE MONTH(tanggal) = '{bulan}' AND YEAR(tanggal) = '{tahun}' AND cabang_id = '{cabang_id}' GROUP BY hari ORDER BY hari ASC;
+6.5. Strategi Skalabilitas Laporan
+Job Terjadwal: Gunakan node-cron untuk menjalankan skrip setiap hari pada pukul 03:00 pagi WIB.
+Logika Skrip:
+Ambil data transaksi harian dari hari sebelumnya.
+Hitung total_pendapatan, total_hpp, dan jumlah_transaksi per cabang.
+INSERT atau UPDATE data agregat ke tabel RingkasanHarian.
+6.6. Panduan Dokumentasi Kode untuk AI
+Tambahkan @desc (deskripsi), @route (endpoint), @access (hak akses), dan @body (payload) pada setiap fungsi controller di backend.
+6.7. Logika Autorisasi & Manajemen Peran
+Middleware Autentikasi: Middleware Node.js akan membaca token JWT dari header.
+Middleware Otorisasi: Middleware ini akan memvalidasi peran dan hak akses dengan memeriksa hak_akses yang ada di token.payload atau dengan kueri database.
+Contoh Autentikasi (Pseudo-Code):
+function verifyToken(req, res, next) {
+    const token = req.headers.authorization.split(' ')[1];
+    if (!token) return res.status(401).send('Akses ditolak.');
+    try {
+        const verified = jwt.verify(token, process.env.TOKEN_SECRET);
+        req.user = verified;
+        next();
+    } catch (err) {
+        res.status(400).send('Token tidak valid.');
+    }
+}
+
+
+Contoh Otorisasi (Pseudo-Code):
+function checkPermission(idFitur) {
+    return (req, res, next) => {
+        const hakAkses = req.user.hak_akses;
+        if (hakAkses.includes(idFitur)) {
+            next();
+        } else {
+            res.status(403).send('Akses tidak diizinkan.');
+        }
+    };
+}
+
+
+6.8. Alur Autentikasi & Registrasi
+Registrasi Pengguna
+Fungsi: Mendaftarkan pengguna baru, membuat entitas Kedai dan Cabang pertama mereka, lalu mengembalikan token otentikasi.
+Alur:
+Frontend: Mengirimkan data registrasi (nama_lengkap, email, password) ke endpoint /api/auth/register.
+Backend: Menerima data dan melakukan validasi dasar (misalnya, format email).
+Backend: Mencari email di database. Jika sudah ada, kirim respon 409 Conflict.
+Backend: Membuat hash dari password yang aman menggunakan bcrypt atau algoritma hashing yang kuat.
+Backend: Menggunakan transaksi database untuk:
+Membuat entri baru di tabel Kedai.
+Membuat entri baru di tabel Cabang (dengan is_utama: true) yang terhubung ke kedai_id yang baru dibuat.
+Membuat entri baru di tabel Pengguna, dengan peran: 'Pemilik', dan menghubungkannya ke kedai_id serta cabang_id yang baru dibuat.
+Backend: Membuat token JWT yang berisi user_id, kedai_id, dan peran untuk otentikasi awal.
+Backend: Mengirimkan respon 201 Created beserta token JWT.
+Frontend: Menyimpan token JWT yang diterima di local storage atau state management (misalnya Pinia/Vuex). Token ini akan disertakan dalam setiap permintaan API selanjutnya untuk otentikasi.
+Login Pengguna
+Fungsi: Memverifikasi kredensial pengguna, memperbarui status login, dan mengembalikan token otentikasi.
+Alur:
+Frontend: Mengirimkan data login (email, password) ke endpoint /api/auth/login.
+Backend: Menerima data dan mencari pengguna di tabel Pengguna berdasarkan email.
+Backend: Jika pengguna tidak ditemukan, kirim respon 401 Unauthorized.
+Backend: Membandingkan password yang diinput dengan password hash di database menggunakan bcrypt.compare().
+Backend: Jika password tidak cocok, kirim respon 401 Unauthorized.
+Backend: Jika cocok, membuat token JWT baru yang berisi user_id, kedai_id, dan peran.
+Backend: Memperbarui kolom terakhir_login di database.
+Backend: Mengirimkan respon 200 OK beserta token JWT.
+Frontend: Menyimpan token JWT yang baru dan menggunakannya untuk permintaan selanjutnya.
+7. Aspek Keamanan
+Hashing Kata Sandi: Gunakan bcrypt untuk hashing kata sandi. Pastikan untuk menggunakan salt yang unik per pengguna untuk mencegah serangan Rainbow Table.
+Validasi Input: Implementasikan validasi input yang ketat di sisi server untuk mencegah serangan Injeksi SQL dan XSS. Gunakan validator seperti express-validator.
+Pengelolaan Sesi: Terapkan kebijakan masa berlaku (expiration) untuk token JWT. Token yang kedaluwarsa harus secara otomatis dibersihkan. Pertimbangkan penggunaan Refresh Token untuk meningkatkan keamanan.
+Kebijakan Akses: Pastikan semua endpoint yang sensitif dilindungi oleh middleware otentikasi dan otorisasi.
+CORS: Konfigurasi Cross-Origin Resource Sharing (CORS) hanya untuk domain frontend yang diizinkan untuk mencegah permintaan dari sumber yang tidak valid.
+8. Strategi Pengujian (Testing Strategy)
+Untuk memastikan kualitas kode dan fungsionalitas aplikasi, akan dilakukan beberapa jenis pengujian.
+Unit Testing: Menguji fungsi dan metode individual secara terisolasi. Gunakan Jest untuk menguji logika bisnis di service dan utilitas.
+Integration Testing: Menguji bagaimana berbagai komponen (misalnya controller, service, model) bekerja sama. Gunakan Supertest untuk menguji endpoint API.
+End-to-End (E2E) Testing: Mensimulasikan interaksi pengguna dari awal hingga akhir. Gunakan Cypress atau Playwright untuk menguji alur seperti login, registrasi, dan transaksi.
+
