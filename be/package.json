@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --runInBand",
+    "test": "npx sequelize-cli db:migrate && jest --runInBand",
     "seed:test": "node scripts/seed_test_users.js",
     "seed:undo": "node scripts/seed_undo_test_users.js",
     "migrate": "npx sequelize-cli db:migrate",
