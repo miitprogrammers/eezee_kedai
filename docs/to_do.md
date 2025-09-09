@@ -17,10 +17,11 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
 3. P0 — Implementasi Auth dasar: DONE (2025-09-09)
   - Register & Login, model `Kedai/Cabang/Pengguna`, middleware `verifyToken` & `requireRole`, dan tests dasar sudah ada.
 
-4. P1 — Model & CRUD: InventarisMaster, StokSaatIni, HistoriInventaris: DONE
+4. P1  Model & CRUD: InventarisMaster, StokSaatIni, HistoriInventaris: DONE
   - Models + migrations ditambahkan (`be/models`, `be/migrations`). Masalah foreign-key yang sempat muncul sudah disesuaikan.
 
-5. P2 — Frontend scaffold (Vue3 + Vuetify + PWA): PENDING
+5. P2  Frontend scaffold (Vue3 + Vuetify + PWA): PROGRESS (2025-09-10)
+  - Ready to start: backend provides basic auth, inventory endpoints, and OpenAPI at `/api/docs/openapi.yaml`.
 
 6. P2 — Peran & permission management UI: PENDING
 
@@ -39,7 +40,7 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
 
 | Total tugas | DONE | PARTIAL | PENDING | Rasio (berat) |
 |---:|---:|---:|---:|---:|
-| 9 | 7 | 0 | 2 | 77.8% ( (7 + 0.5*0) / 9 ) |
+| 9 | 7 | 1 | 1 | 83.3% ( (7 + 0.5*1) / 9 ) |
  
 Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot berbeda, beri tahu saya.
 
