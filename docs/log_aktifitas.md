@@ -8446,3 +8446,10 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"action":"run_tests","result":"9 test suites passed, 22 tests passed"}
 
+
+### 2025-09-10 00:47:43 WIB — INFO
+
+- Hardening stockTransactionController: add input validation and error mapping; added docs/openapi.json
+
+- meta: {"files":["be/controllers/stockTransactionController.js","docs/openapi.json"],"action":"hardening_and_openapi"}
+

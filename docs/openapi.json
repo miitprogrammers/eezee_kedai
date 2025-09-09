@@ -1,0 +1,157 @@
+{
+	"openapi": "3.1.3",
+	"info": {
+		"title": "Eezee Kedai API (minimal)",
+		"version": "0.1.0",
+		"description": "Minimal OpenAPI for frontend dev — auth, management, inventory, stock-in"
+	},
+	"servers": [
+		{ "url": "http://localhost:3000" }
+	],
+	"paths": {
+		"/api/auth/register": {
+			"post": {
+				"summary": "Register user",
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"nama": { "type": "string" },
+									"email": { "type": "string" },
+									"password": { "type": "string" },
+									"role": { "type": "string" }
+								},
+								"required": ["email", "password"]
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": { "description": "Created" },
+					"400": { "description": "Validation error" }
+				}
+			}
+		},
+		"/api/auth/login": {
+			"post": {
+				"summary": "Login",
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"email": { "type": "string" },
+									"password": { "type": "string" }
+								},
+								"required": ["email", "password"]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"token": { "type": "string" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/mgmt/kedai": {
+			"post": {
+				"summary": "Create kedai (protected)",
+				"security": [{ "bearerAuth": [] }],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": { "nama": { "type": "string" } },
+								"required": ["nama"]
+							}
+						}
+					}
+				},
+				"responses": { "201": { "description": "Created" } }
+			}
+		},
+		"/api/mgmt/cabang": {
+			"post": {
+				"summary": "Create cabang (protected)",
+				"security": [{ "bearerAuth": [] }],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"nama": { "type": "string" },
+									"kedai_id": { "type": "string" }
+								},
+								"required": ["nama", "kedai_id"]
+							}
+						}
+					}
+				},
+				"responses": { "201": { "description": "Created" } }
+			}
+		},
+		"/api/inventory/inventaris": {
+			"post": {
+				"summary": "Create inventory item",
+				"security": [{ "bearerAuth": [] }],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": { "nama": { "type": "string" }, "kode": { "type": "string" } },
+								"required": ["nama", "kode"]
+							}
+						}
+					}
+				},
+				"responses": { "201": { "description": "Created" } }
+			}
+		},
+		"/api/inventory/tx/stock-in": {
+			"post": {
+				"summary": "Stock in transaction",
+				"security": [{ "bearerAuth": [] }],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"item_id": { "type": "string" },
+									"cabang_id": { "type": "string" },
+									"jumlah": { "type": "number" },
+									"harga_beli": { "type": "number" }
+								},
+								"required": ["item_id", "cabang_id", "jumlah", "harga_beli"]
+							}
+						}
+					}
+				},
+				"responses": { "200": { "description": "OK" }, "422": { "description": "Validation error" } }
+			}
+		}
+	},
+	"components": {
+		"securitySchemes": { "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" } }
+	}
+}

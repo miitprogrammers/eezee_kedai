@@ -3,6 +3,13 @@ const { appendActivity } = require("../utils/log_activity");
 
 exports.stockIn = async (req, res) => {
   const { item_id, cabang_id, jumlah, harga_beli, user_id } = req.body;
+  // Input validation: ensure required fields present and types valid
+  if (!item_id || !cabang_id || jumlah == null || harga_beli == null) {
+    return res.status(422).json({ error: 'Missing required fields: item_id, cabang_id, jumlah, harga_beli' });
+  }
+  if (isNaN(Number(jumlah)) || isNaN(Number(harga_beli)) || Number(jumlah) <= 0 || Number(harga_beli) < 0) {
+    return res.status(422).json({ error: 'Invalid numeric values for jumlah or harga_beli' });
+  }
   const maxAttempts = 3;
   const delay = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -53,8 +60,8 @@ exports.stockIn = async (req, res) => {
         );
       }
 
-      // write history
-      await HistoriInventaris.create(
+  // write history
+  await HistoriInventaris.create(
         {
           log_id: require("uuid").v4(),
           tanggal: new Date(),
@@ -68,7 +75,7 @@ exports.stockIn = async (req, res) => {
         { transaction: t }
       );
 
-      await t.commit();
+  await t.commit();
       appendActivity(`Stock IN processed: ${item_id}@${cabang_id} +${jumlah}`, {
         meta: { item_id, cabang_id, jumlah },
       });
@@ -77,22 +84,21 @@ exports.stockIn = async (req, res) => {
       try {
         await t.rollback();
       } catch (e) {}
-      // If it's a unique constraint / race, retry a few times
-      const isUnique =
-        err &&
-        err.name &&
-        (err.name === "SequelizeUniqueConstraintError" ||
-          String(err).toLowerCase().includes("duplicate"));
+      // Map known Sequelize validation/unique errors to 422
+      const isValidationErr = err && err.name && (err.name === 'SequelizeValidationError' || err.name === 'SequelizeUniqueConstraintError');
+      const isUnique = err && err.name && (err.name === 'SequelizeUniqueConstraintError' || String(err).toLowerCase().includes('duplicate'));
       if (isUnique && attempt < maxAttempts) {
         await delay(50 * attempt);
         continue; // retry
       }
-      appendActivity("Stock IN failed", {
-        level: "error",
+      appendActivity('Stock IN failed', {
+        level: 'error',
         error: err,
-        details: { how: "stockIn", plan: "retry" },
+        details: { how: 'stockIn', plan: isValidationErr ? 'fix request payload' : 'inspect and retry' },
       });
-      return res.status(500).json({ error: err.message || String(err) });
+      const status = isValidationErr ? 422 : 500;
+      const message = isValidationErr ? (err.errors ? err.errors.map(e => e.message).join('; ') : err.message) : 'Internal server error';
+      return res.status(status).json({ error: message });
     }
   }
 };
