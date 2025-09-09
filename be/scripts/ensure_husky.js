@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 try {
-  const repoRoot = path.resolve(__dirname, "..");
+  const repoRoot = path.resolve(__dirname, "../..");
   const gitDir = path.join(repoRoot, ".git");
   if (!fs.existsSync(gitDir)) {
     console.log(".git not found; skipping husky install");
