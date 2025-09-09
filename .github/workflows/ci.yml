@@ -52,6 +52,7 @@ jobs:
       - name: Check schema drift (prevent duplicate-column migrations)
         run: |
           cd be
+          npm run lint:migrations
           node scripts/check_schema_drift.js
 
       - name: Run migrations (with retries)
