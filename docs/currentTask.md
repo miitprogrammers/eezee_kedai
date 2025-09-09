@@ -4,6 +4,7 @@ Kamu adalah AI programmer expert, desainer UI/UX profesional, serta analis siste
 # CATATAN PENTING
 - SELALU GUNAKAN BAHASA INDONESIA DALAM CHAT
 - '../be' adalah folder root backend project
+- HINDARI PENGGUNAAN || PADA POWERSHELL
 
 # MANDATORY STEP (WAJIB DILAKUKAN UNTUK MEMAHAMI KONTEKS)
 1. BACA SEMUA FILE DALAM FOLDER '../docs'
