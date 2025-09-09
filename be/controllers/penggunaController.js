@@ -18,12 +18,20 @@ async function createPengguna(req, res) {
     appendActivity(`Pengguna created: ${p.user_id}`);
     res.status(201).json({ user_id: p.user_id, email: p.email });
   } catch (err) {
+    const isValidation =
+      err && err.name && err.name === "SequelizeValidationError";
+    const isUnique =
+      err && err.name && err.name === "SequelizeUniqueConstraintError";
     appendActivity("Pengguna create failed", {
       level: "error",
       error: err,
       details: { how: "createPengguna" },
     });
-    res.status(400).json({ error: err.message });
+    let status;
+    if (isUnique) status = 400; // duplicate / unique constraint
+    else if (isValidation) status = 422; // payload validation
+    else status = 500;
+    res.status(status).json({ error: err.message || String(err) });
   }
 }
 
@@ -39,7 +47,7 @@ async function listPengguna(req, res) {
       error: err,
       details: { how: "listPengguna" },
     });
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message || String(err) });
   }
 }
 
@@ -57,7 +65,7 @@ async function getPengguna(req, res) {
       error: err,
       details: { how: "getPengguna" },
     });
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message || String(err) });
   }
 }
 
@@ -73,12 +81,20 @@ async function updatePengguna(req, res) {
     appendActivity(`Pengguna updated: ${id}`);
     res.json({ success: true });
   } catch (err) {
+    const isValidation =
+      err && err.name && err.name === "SequelizeValidationError";
+    const isUnique =
+      err && err.name && err.name === "SequelizeUniqueConstraintError";
     appendActivity("Pengguna update failed", {
       level: "error",
       error: err,
       details: { how: "updatePengguna" },
     });
-    res.status(400).json({ error: err.message });
+    let status;
+    if (isUnique) status = 400;
+    else if (isValidation) status = 422;
+    else status = 500;
+    res.status(status).json({ error: err.message || String(err) });
   }
 }
 
@@ -96,7 +112,7 @@ async function deletePengguna(req, res) {
       error: err,
       details: { how: "deletePengguna" },
     });
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message || String(err) });
   }
 }
 

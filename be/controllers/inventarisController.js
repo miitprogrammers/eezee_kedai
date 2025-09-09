@@ -15,8 +15,22 @@ exports.createInventaris = async (req, res) => {
     });
     res.status(201).json(inv);
   } catch (err) {
-    appendActivity("Inventaris create failed", { level: "error", error: err });
-    res.status(400).json({ error: err.message || err });
+    // Map Sequelize validation/unique errors to 422, others to 500
+    const isValidation =
+      err &&
+      err.name &&
+      (err.name === "SequelizeValidationError" ||
+        err.name === "SequelizeUniqueConstraintError");
+    appendActivity("Inventaris create failed", {
+      level: "error",
+      error: err,
+      details: {
+        how: "createInventaris",
+        plan: "inspect payload / constraints",
+      },
+    });
+    const status = isValidation ? 422 : 500;
+    res.status(status).json({ error: err.message || String(err) });
   }
 };
 
