@@ -8453,3 +8453,10 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"files":["be/controllers/stockTransactionController.js","docs/openapi.json"],"action":"hardening_and_openapi"}
 
+
+### 2025-09-10 00:51:34 WIB — INFO
+
+- Checkpoint: review kesiapan menuju frontend; update docs/to_do.md (API docs marked DONE)
+
+- meta: {"action":"checkpoint","files":["docs/to_do.md","docs/openapi.json"]}
+

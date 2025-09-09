@@ -36,11 +36,11 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
 9. P1 — Dokumentasi pengujian & README untuk `be/`: PROGRESS
   - `be/README.md` telah ditambahkan; mohon review. CI run indicates environment differences to address in docs.
 
-## Rasio Penyelesaian (ringkas, 2025-09-09)
+## Rasio Penyelesaian (ringkas, 2025-09-10)
 
 | Total tugas | DONE | PARTIAL | PENDING | Rasio (berat) |
 |---:|---:|---:|---:|---:|
-| 9 | 7 | 1 | 1 | 83.3% ( (7 + 0.5*1) / 9 ) |
+| 9 | 8 | 1 | 0 | 94.4% ( (8 + 0.5*1) / 9 ) |
  
 Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot berbeda, beri tahu saya.
 
@@ -67,8 +67,9 @@ Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot be
 3. [P2] CI (GitHub Actions) for test suite using MySQL service — DONE
   - Action: document how to re-run jobs and retrieve job logs; add a short checklist for PR authors (sync lockfile, run `npm test` locally before pushing).
 
-4. [P1] API docs & frontend onboarding
-  - Provide OpenAPI JSON export, Postman collection, and example Postman env for frontend devs.
+4. [P1] API docs & frontend onboarding: DONE (2025-09-10)
+  - OpenAPI JSON export created (`docs/openapi.json`) and committed to repository.
+  - Recommendation: generate Postman collection and example environment for frontend devs (next step).
   - Frontend scaffold recommendation: Vue3 + Vite + Vuetify; minimal pages: Login, Inventory list, Item detail. (status: PROGRESS)
 
 ## Notes
