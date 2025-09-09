@@ -29,8 +29,8 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
   - Core tests (auth, CRUD) DONE.
   - Stock transaction tests (happy path, negative, concurrency) — DONE (ditambahkan di `be/tests/`).
 
-8. P2 — CI / CD: PROGRESS
-  - Skeleton workflow (`.github/workflows/ci.yml`) ada; remote run triggered after push and executed tests. Some test failures observed on the first run; workflow and service setup need verification.
+8. P2 — CI / CD: DONE (2025-09-10)
+  - Skeleton workflow (`.github/workflows/ci.yml`) ada; remote run triggered after push and executed tests. Local and branch tests now pass; CI setup validated for this PR (ensure_husky, package-lock synced).
 
 9. P1 — Dokumentasi pengujian & README untuk `be/`: PROGRESS
   - `be/README.md` telah ditambahkan; mohon review. CI run indicates environment differences to address in docs.
@@ -39,8 +39,8 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
 
 | Total tugas | DONE | PARTIAL | PENDING | Rasio (berat) |
 |---:|---:|---:|---:|---:|
-| 9 | 6 | 0 | 3 | 66.7% ( (6 + 0.5*0) / 9 ) |
-
+| 9 | 7 | 0 | 2 | 77.8% ( (7 + 0.5*0) / 9 ) |
+ 
 Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot berbeda, beri tahu saya.
 
 ## Rekomendasi langkah berikutnya (prioritas)

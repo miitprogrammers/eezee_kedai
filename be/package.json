@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "test": "npx sequelize-cli db:migrate && jest --runInBand",
     "lint:migrations": "node scripts/lint_migrations.js",
-  "prepare": "husky install",
+    "prepare": "node scripts/ensure_husky.js",
     "seed:test": "node scripts/seed_test_users.js",
     "seed:undo": "node scripts/seed_undo_test_users.js",
     "migrate": "npx sequelize-cli db:migrate",
