@@ -24,3 +24,48 @@ Checklist review sebelum commit migration baru
 - [ ] Tambahkan test manual singkat di dev DB: `npx sequelize-cli db:migrate --env test` dan `npx sequelize-cli db:migrate:undo --env test`.
 
 Catatan: file ini adalah panduan minimal. Terapkan pattern serupa untuk `removeColumn`, `changeColumn`, `renameColumn` bila diperlukan.
+
+Contoh idempotent untuk operasi `changeColumn` dan `renameColumn`
+
+1) changeColumn (ubah tipe/atribut kolom) — idempotent pattern:
+
+```javascript
+// up
+const table = await queryInterface.describeTable('MyTable');
+if (table && table.some_column) {
+   // optionally check current type/allowNull/defaultValue before applying
+   await queryInterface.changeColumn('MyTable', 'some_column', {
+      type: Sequelize.DECIMAL(10,2),
+      allowNull: false,
+   });
+}
+
+// down
+const tableDown = await queryInterface.describeTable('MyTable');
+if (tableDown && tableDown.some_column) {
+   await queryInterface.changeColumn('MyTable', 'some_column', {
+      type: Sequelize.STRING(255),
+      allowNull: true,
+   });
+}
+```
+
+Notes: untuk `changeColumn` Anda bisa menambahkan pemeriksaan ringan (mis. current type ada di `table.some_column.type`) sebelum memanggil `changeColumn` agar tidak melakukan perubahan yang tidak perlu.
+
+2) renameColumn (ganti nama kolom) — idempotent pattern:
+
+```javascript
+// up: rename old_column -> new_column jika kondisi terpenuhi
+const tableUp = await queryInterface.describeTable('MyTable');
+if (tableUp && tableUp.old_column && !tableUp.new_column) {
+   await queryInterface.renameColumn('MyTable', 'old_column', 'new_column');
+}
+
+// down: kembalikan jika perlu
+const tableDown2 = await queryInterface.describeTable('MyTable');
+if (tableDown2 && tableDown2.new_column && !tableDown2.old_column) {
+   await queryInterface.renameColumn('MyTable', 'new_column', 'old_column');
+}
+```
+
+Dengan pola ini, migrasi aman dijalankan ulang dan tidak menyebabkan error `Duplicate column` atau `column not found` ketika DB sudah berada pada state berbeda.
