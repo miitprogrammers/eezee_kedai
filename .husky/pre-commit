@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running migration linter..."
+cd be
+npm run lint:migrations
+RESULT=$?
+if [ $RESULT -ne 0 ]; then
+  echo "Migration linter failed. Commit aborted."
+  exit $RESULT
+fi
+
+echo "Migration linter passed. Proceeding with commit."
