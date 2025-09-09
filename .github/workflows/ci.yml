@@ -49,6 +49,11 @@ jobs:
           echo "DB_PORT=3306" >> .env
           echo "NODE_ENV=test" >> .env
 
+      - name: Check schema drift (prevent duplicate-column migrations)
+        run: |
+          cd be
+          node scripts/check_schema_drift.js
+
       - name: Run migrations (with retries)
         run: |
           cd be
