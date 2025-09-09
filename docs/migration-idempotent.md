@@ -25,6 +25,17 @@ Checklist review sebelum commit migration baru
 
 Catatan: file ini adalah panduan minimal. Terapkan pattern serupa untuk `removeColumn`, `changeColumn`, `renameColumn` bila diperlukan.
 
+Developer setup (Husky):
+
+Jika tim ingin mengaktifkan pre-commit hook lokal yang menjalankan lint migrations, jalankan di folder `be`:
+
+```bash
+npm ci
+npm run prepare # installs husky hooks (one-time per machine)
+```
+
+Setelah itu, pre-commit akan menjalankan `npm run lint:migrations` sebelum commit.
+
 Contoh idempotent untuk operasi `changeColumn` dan `renameColumn`
 
 1) changeColumn (ubah tipe/atribut kolom) — idempotent pattern:
