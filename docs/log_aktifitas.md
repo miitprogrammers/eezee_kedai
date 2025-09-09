@@ -7984,4 +7984,43 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 - Made migration templates tolerant (try/catch) and pushed to main; lint passes locally
 
 - meta: {"action":"docs:fix-templates-trycatch","files":["be/migrations/20250911-template-add-column-idempotent.js","be/migrations/20250912-template-change-rename-idempotent.js"]}
+### 2025-09-09 23:44:36 WIB — INFO
 
+- Moved migration templates to be/migration-templates and added Husky prepare script; documented developer setup
+
+- meta: {"action":"ci:move-templates-and-husky-prepare","files":["be/migration-templates","be/package.json","docs/migration-idempotent.md"]}
+
+
+### 2025-09-09 23:46:16 WIB — INFO
+
+- Added .husky/pre-commit to run migration linter; pushed to main
+
+- meta: {"action":"ci:add-husky-precommit","files":[".husky/pre-commit"]}
+
+
+### 2025-09-09 23:49:57 WIB — INFO
+
+- Checkpoint: updated docs/to_do.md with migration/linter/Husky progress
+
+- meta: {"action":"checkpoint:update_todo","files":["docs/to_do.md"],"note":"migrations idempotent, lint, schema-drift, husky pre-commit added"}
+
+
+### 2025-09-09 23:54:39 WIB — INFO
+
+- Committed & pushed ensure_husky changes to branch ci/trigger-main-2
+
+- meta: {"action":"git:push","files":["be/package.json","be/scripts/ensure_husky.js"],"branch":"ci/trigger-main-2"}
+
+
+### 2025-09-09 23:58:15 WIB — INFO
+
+- User created PR from ci/trigger-main-2 to main
+
+- meta: {"action":"git:pr-created","branch":"ci/trigger-main-2","target":"main"}
+
+
+### 2025-09-09 23:58:56 WIB — INFO
+
+- Catatan: test saja
+
+- meta: {"action":"note:test","note":"catatan test saja"}
