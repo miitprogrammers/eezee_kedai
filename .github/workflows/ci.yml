@@ -67,3 +67,39 @@ jobs:
         run: |
           cd be
           npm test
+
+  smoke-docs:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install backend deps
+        run: |
+          cd be
+          npm ci
+
+      - name: Configure env
+        run: |
+          cd be
+          echo "DB_HOST=127.0.0.1" > .env || true
+          echo "DB_USER=root" >> .env || true
+          echo "DB_PASS=root" >> .env || true
+          echo "DB_NAME=eezee_kedai_test" >> .env || true
+          echo "DB_PORT=3306" >> .env || true
+          echo "NODE_ENV=development" >> .env || true
+
+      - name: Start backend
+        run: |
+          cd be
+          nohup npm run dev &
+          sleep 3
+
+      - name: Run docs smoke check
+        run: |
+          cd be
+          node scripts/smoke_check_docs.js

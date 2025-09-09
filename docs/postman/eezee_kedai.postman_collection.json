@@ -6,31 +6,110 @@
   },
   "item": [
     {
-      "name": "Auth - Register",
+      "name": "Mgmt - Create Kedai",
       "request": {
         "method": "POST",
         "header": [
-          { "key": "Content-Type", "value": "application/json" }
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
         ],
-        "body": { "mode": "raw", "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}" },
-        "url": { "raw": "{{baseUrl}}/api/auth/register", "host": ["{{baseUrl}}"], "path": ["api","auth","register"] }
+        "body": { "mode": "raw", "raw": "{\n  \"nama\": \"Toko Dev\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/mgmt/kedai", "host": ["{{baseUrl}}"], "path": ["api","mgmt","kedai"] }
+      }
+    },
+    {
+      "name": "Mgmt - Create Cabang",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"nama\": \"Cabang Dev\",\n  \"kedai_id\": \"{{kedai_id}}\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/mgmt/cabang", "host": ["{{baseUrl}}"], "path": ["api","mgmt","cabang"] }
+      }
+    },
+    {
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/register",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "auth", "register"]
+        }
       }
     },
     {
       "name": "Auth - Login",
-      "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}" }, "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api","auth","login"] } }
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "auth", "login"]
+        }
+      }
     },
     {
       "name": "Inventory - List Inventaris",
-      "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/inventory/inventaris", "host": ["{{baseUrl}}"], "path": ["api","inventory","inventaris"] } }
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/inventaris",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "inventory", "inventaris"]
+        }
+      }
+    },
+    {
+      "name": "Inventory - Create Inventaris",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"nama\": \"Produk A\",\n  \"kode\": \"PROD-A\",\n  \"kedai_id\": \"{{kedai_id}}\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/inventory/inventaris", "host": ["{{baseUrl}}"], "path": ["api","inventory","inventaris"] }
+      }
+    },
+    {
+      "name": "Inventory - Get Stok",
+      "request": {
+        "method": "GET",
+        "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ],
+        "url": { "raw": "{{baseUrl}}/api/inventory/stok?item_id={{item_id}}&cabang_id={{cabang_id}}", "host": ["{{baseUrl}}"], "path": ["api","inventory","stok"], "query": [ { "key": "item_id", "value": "{{item_id}}" }, { "key": "cabang_id", "value": "{{cabang_id}}" } ] }
+      }
     },
     {
       "name": "Stock - Stock In",
       "request": {
         "method": "POST",
-        "header": [ { "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{token}}" } ],
-        "body": { "mode": "raw", "raw": "{\n  \"item_id\": \"ITEM-1\",\n  \"cabang_id\": \"CAB-1\",\n  \"jumlah\": 10,\n  \"harga_beli\": 15000,\n  \"kedai_id\": \"KED-1\"\n}" },
-        "url": { "raw": "{{baseUrl}}/api/inventory/tx/stock-in", "host": ["{{baseUrl}}"], "path": ["api","inventory","tx","stock-in"] }
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"item_id\": \"ITEM-1\",\n  \"cabang_id\": \"CAB-1\",\n  \"jumlah\": 10,\n  \"harga_beli\": 15000,\n  \"kedai_id\": \"KED-1\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/inventory/tx/stock-in",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "inventory", "tx", "stock-in"]
+        }
       }
     }
   ],
