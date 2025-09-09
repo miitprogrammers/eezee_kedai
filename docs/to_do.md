@@ -48,15 +48,28 @@ Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot be
 
 1. (P1) Validasi CI di remote (push branch / PR) agar workflow bisa menjalankan migrations & tests pada environment bersih.
 2. (P1) Perkuat assertions pada `HistoriInventaris` di tests (tipe_transaksi, harga_beli, timestamp).
-3. (P1) Tambahkan validasi server-side untuk `cabang_id` agar input invalid menghasilkan 4xx, bukan 500. — DONE (validator implemented; tests updated)
+  - Suggested assertions: `tipe_transaksi`  in ['IN','OUT'], `harga_beli` > 0, `timestamp` present and ISO-8601.
+3. (P1) Tambahkan validasi server-side untuk `cabang_id` agar input invalid menghasilkan 4xx, bukan 500. — DONE
+  - Verified in tests; pastikan test names reference this validation so future regressions are caught.
 4. (P2) Tambahkan `be/README.md` singkat: install, migrate, run tests.
+  - Status: PROGRESS — README present. Suggested additions: minimal `.env` variables list, seed instructions, how to re-run CI locally, and common troubleshooting (husky/lockfile notes).
 
 ## Short-term next steps (prioritas)
 
-1. [P1] Implement Inventory & Menu models + migrations dan CRUD dasar.
-2. [P0] Implement endpoint transaksi (stok / HPP) dengan DB transactions dan tests.
-3. [P2] Siapkan CI (GitHub Actions) untuk menjalankan test suite menggunakan service MySQL.
-4. [P1] Sediakan minimal API docs atau scaffold frontend (Vue3 + Vuetify) untuk integrasi.
+1. [P1] Inventory endpoints: verify coverage & complete missing pieces
+  - a) Verify CRUD endpoints and tests for `InventarisMaster`, `StokSaatIni`, `HistoriInventaris`. (status: PARTIAL — models & migrations added; some validation errors observed in logs)
+  - b) Implement `Menu` model + migration + CRUD if still missing. (status: PENDING)
+
+2. [P0] Endpoint transaksi (stok / HPP) with DB transactions and tests
+  - Status: P0 — ensure ACID transactions for stock adjustments, add robust concurrency tests, and fix validation errors found during test runs.
+  - Acceptance: concurrency tests pass and no validation-related failures in CI.
+
+3. [P2] CI (GitHub Actions) for test suite using MySQL service — DONE
+  - Action: document how to re-run jobs and retrieve job logs; add a short checklist for PR authors (sync lockfile, run `npm test` locally before pushing).
+
+4. [P1] API docs & frontend onboarding
+  - Provide OpenAPI JSON export, Postman collection, and example Postman env for frontend devs.
+  - Frontend scaffold recommendation: Vue3 + Vite + Vuetify; minimal pages: Login, Inventory list, Item detail. (status: PROGRESS)
 
 ## Notes
 

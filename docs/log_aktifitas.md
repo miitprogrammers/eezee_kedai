@@ -8080,3 +8080,10 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"files":["docs/to_do.md"],"action":"update_todo"}
 
+
+### 2025-09-10 00:35:00 WIB — INFO
+
+- Update to_do: clarified recommendations and short-term steps for frontend onboarding and CI
+
+- meta: {"files":["docs/to_do.md"],"changes":"refine_recommendations_and_shortterm"}
+
