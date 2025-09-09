@@ -35,19 +35,20 @@ Prioritas: P0 = sangat penting, P1 = penting, P2 = nice-to-have
 9. P1 — Dokumentasi pengujian & README untuk `be/`: PROGRESS
   - `be/README.md` telah ditambahkan; mohon review. CI run indicates environment differences to address in docs.
 
-## Rasio Penyelesaian (ringkas, 2025-09-09)
+## Rasio Penyelesaian (ringkas, 2025-09-09 21:00 WIB)
 
 | Total tugas | DONE | PARTIAL | PENDING | Rasio (berat) |
 |---:|---:|---:|---:|---:|
-| 9 | 6 | 0 | 3 | 66.7% ( (6 + 0.5*0) / 9 ) |
+| 9 | 8 | 0 | 1 | 88.9% ((8 + 0.5*0) / 9) |
 
-Catatan: PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot berbeda, beri tahu saya.
+Catatan: angka diperbarui berdasarkan checkpoint terakhir (migrasi idempotent, migration-linter, schema-drift checker, dan pre-commit Husky sudah ditambahkan). PARTIAL dihitung sebagai 0.5 (setengah selesai). Jika Anda mau bobot berbeda, beri tahu saya.
 
 ## Rekomendasi langkah berikutnya (prioritas)
 
 1. (P1) Validasi CI di remote (push branch / PR) agar workflow bisa menjalankan migrations & tests pada environment bersih.
 2. (P1) Perkuat assertions pada `HistoriInventaris` di tests (tipe_transaksi, harga_beli, timestamp).
 3. (P1) Tambahkan validasi server-side untuk `cabang_id` agar input invalid menghasilkan 4xx, bukan 500. — DONE (validator implemented; tests updated)
+5. (CHECKPOINT) 2025-09-09 21:00 WIB: Migrasi idempotent, migration-linter (`be/scripts/lint_migrations.js`), schema-drift checker (`be/scripts/check_schema_drift.js`), pemindahan template migrasi ke `be/migration-templates/`, dan `.husky/pre-commit` telah ditambahkan dan dilog.
 4. (P2) Tambahkan `be/README.md` singkat: install, migrate, run tests.
 
 ## Short-term next steps (prioritas)
