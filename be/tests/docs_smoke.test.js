@@ -9,7 +9,8 @@ describe('Docs smoke', () => {
   });
 
   test('GET /api/docs/swagger returns 200', async () => {
-    const res = await request(app).get('/api/docs/swagger');
-    expect(res.statusCode).toBe(200);
+  // swagger middleware may redirect from '/api/docs/swagger' -> '/api/docs/swagger/'
+  const res = await request(app).get('/api/docs/swagger/');
+  expect(res.statusCode).toBe(200);
   });
 });
