@@ -9219,3 +9219,24 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"exit":"0"}
 
+
+### 2025-09-10 01:54:07 WIB — INFO
+
+- FE dependencies install + lint
+
+- meta: {"action":"fe_install_and_lint","files":["fe/"]}
+
+
+### 2025-09-10 01:54:30 WIB — INFO
+
+- Added frontend CI workflow
+
+- meta: {"action":"add_ci_workflow","files":[".github/workflows/fe-ci.yml"]}
+
+
+### 2025-09-10 01:59:42 WIB — INFO
+
+- Attempted npm ci earlier; now trying npm install to create lockfile and verify build
+
+- meta: {"action":"fe_install_attempt_retry","files":["fe/"],"note":"previous ci failed due to peer-deps; eslint downgraded to 8.x"}
+
