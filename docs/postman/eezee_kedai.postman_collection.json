@@ -1,0 +1,41 @@
+{
+  "info": {
+    "name": "Eezee Kedai API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/auth/register", "host": ["{{baseUrl}}"], "path": ["api","auth","register"] }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"email\": \"dev+user@example.com\",\n  \"password\": \"secret\"\n}" }, "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api","auth","login"] } }
+    },
+    {
+      "name": "Inventory - List Inventaris",
+      "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/inventory/inventaris", "host": ["{{baseUrl}}"], "path": ["api","inventory","inventaris"] } }
+    },
+    {
+      "name": "Stock - Stock In",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{token}}" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"item_id\": \"ITEM-1\",\n  \"cabang_id\": \"CAB-1\",\n  \"jumlah\": 10,\n  \"harga_beli\": 15000,\n  \"kedai_id\": \"KED-1\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/inventory/tx/stock-in", "host": ["{{baseUrl}}"], "path": ["api","inventory","tx","stock-in"] }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "token", "value": "" }
+  ]
+}

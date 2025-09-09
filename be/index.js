@@ -49,21 +49,23 @@ try {
 app.get("/", (req, res) => res.send("Hello World!"));
 app.get("/health", (req, res) => res.json({ status: "ok", time: Date.now() }));
 
-// expose minimal OpenAPI doc for frontend dev
+// expose minimal OpenAPI doc for frontend dev (YAML + JSON)
 try {
-  const openapiPath = path.join(__dirname, "..", "docs", "openapi.yaml");
-  app.get("/api/docs/openapi.yaml", (req, res) => res.sendFile(openapiPath));
+  const openapiYamlPath = path.join(__dirname, "..", "docs", "openapi.yaml");
+  const openapiJsonPath = path.join(__dirname, "..", "docs", "openapi.json");
+  app.get("/api/docs/openapi.yaml", (req, res) => res.sendFile(openapiYamlPath));
+  app.get("/api/docs/openapi.json", (req, res) => res.sendFile(openapiJsonPath));
 } catch (e) {
   // ignore
 }
 
-// Serve Swagger UI which fetches the YAML doc
+// Serve Swagger UI which fetches the JSON doc (prefer JSON for tooling)
 try {
   app.use(
     "/api/docs/swagger",
     swaggerUi.serve,
     swaggerUi.setup(null, {
-      swaggerOptions: { url: "/api/docs/openapi.yaml" },
+      swaggerOptions: { url: "/api/docs/openapi.json" },
       explorer: true,
     })
   );
@@ -114,3 +116,12 @@ try {
 }
 
 module.exports = { app, server };
+
+// register centralized error handler (loaded after routes)
+try {
+  const errorHandler = require("./middleware/errorHandler");
+  // note: require/registering here won't run for test env if not desired
+  app.use(errorHandler);
+} catch (e) {
+  // ignore if file not present yet
+}
