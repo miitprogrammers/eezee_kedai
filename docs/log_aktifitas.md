@@ -8467,3 +8467,734 @@ Status: Models dan migrations dibuat; validasi lokal sukses menggunakan kredensi
 
 - meta: {"action":"currentTask_execute","files":["docs/to_do.md","docs/log_aktifitas.md","be/"]}
 
+
+### 2025-09-10 00:56:40 WIB — INFO
+
+- Add Postman collection, central errorHandler, and fe/README.md (or validate existing)
+
+- meta: {"action":"add_postman_errorhandler_fe_readme","files":["docs/postman/eezee_kedai.postman_collection.json","be/middleware/errorHandler.js","fe/README.md"]}
+
+
+### 2025-09-10 00:58:43 WIB — INFO
+
+- Add Postman environment, FE TS client, and docs smoke test
+
+- meta: {"action":"add_postman_env_fe_client_smoke_test","files":["docs/postman/eezee_kedai.postman_environment.json","fe/src/api/client.ts","be/tests/docs_smoke.test.js"]}
+
+
+### 2025-09-10 00:59:06 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:06 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Kedai created: 773d9960-9947-44f4-be02-780fe07ffc99
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Cabang created: 770528f6-8c8e-4cc0-946d-90d8e1fb126a
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- InventarisMaster created: item-hpp-1757440747045
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Stock IN processed: item-hpp-1757440747045@770528f6-8c8e-4cc0-946d-90d8e1fb126a +10
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Stock IN processed: item-hpp-1757440747045@770528f6-8c8e-4cc0-946d-90d8e1fb126a +5
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Cabang deleted: 770528f6-8c8e-4cc0-946d-90d8e1fb126a
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Kedai deleted: 773d9960-9947-44f4-be02-780fe07ffc99
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Kedai created: 306d6a13-6873-4601-9d8d-60381e439909
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Cabang created: 0f3d0e8c-7bb5-47b6-aeb7-dfe39663a241
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- InventarisMaster created: item-so-1757440747045
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Stock IN processed: item-so-1757440747045@0f3d0e8c-7bb5-47b6-aeb7-dfe39663a241 +20
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Cabang deleted: 0f3d0e8c-7bb5-47b6-aeb7-dfe39663a241
+
+
+### 2025-09-10 00:59:07 WIB — INFO
+
+- Kedai deleted: 306d6a13-6873-4601-9d8d-60381e439909
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Kedai created: 9ac2f68c-2d99-4c73-9017-3136d0ecb710
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Cabang created: 6373f9e0-0ea0-43c3-81d1-41c226575fd0
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- InventarisMaster created: item-con-1757440748076
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Stock IN processed: item-con-1757440748076@6373f9e0-0ea0-43c3-81d1-41c226575fd0 +10
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Stock IN processed: item-con-1757440748076@6373f9e0-0ea0-43c3-81d1-41c226575fd0 +10
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Stock IN processed: item-con-1757440748076@6373f9e0-0ea0-43c3-81d1-41c226575fd0 +10
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Stock IN processed: item-con-1757440748076@6373f9e0-0ea0-43c3-81d1-41c226575fd0 +10
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Stock IN processed: item-con-1757440748076@6373f9e0-0ea0-43c3-81d1-41c226575fd0 +10
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Cabang deleted: 6373f9e0-0ea0-43c3-81d1-41c226575fd0
+
+
+### 2025-09-10 00:59:08 WIB — INFO
+
+- Kedai deleted: 9ac2f68c-2d99-4c73-9017-3136d0ecb710
+
+
+### 2025-09-10 00:59:09 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:09 WIB — INFO
+
+- Auth: register failed Validation error
+
+
+### 2025-09-10 00:59:09 WIB — INFO
+
+- Auth: login testuser+ci@test.local
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Kedai created: b92376cd-70e7-43d8-ab78-70026ecc4117
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Cabang created: 44560600-c870-48d4-8427-cf8d3f6a37e2
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Pengguna created: e6f4d1f7-6399-4724-b573-3bfe62c34519
+
+
+### 2025-09-10 00:59:10 WIB — ERROR
+
+- WHAT: Pengguna create failed
+- WHY: Validation error
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: TBD
+
+- DETAILS: createPengguna
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Pengguna deleted: e6f4d1f7-6399-4724-b573-3bfe62c34519
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Cabang deleted: 44560600-c870-48d4-8427-cf8d3f6a37e2
+
+
+### 2025-09-10 00:59:10 WIB — INFO
+
+- Kedai deleted: b92376cd-70e7-43d8-ab78-70026ecc4117
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Kedai created: ddff1732-21c7-4087-8bf5-9281ac055a6c
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Cabang created: bf58e0a1-65b2-4253-a814-d7aa8ba5a87a
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- InventarisMaster created: item-neg-1757440751134
+
+
+### 2025-09-10 00:59:11 WIB — ERROR
+
+- WHAT: Stock IN failed
+- WHY: simulated db error
+- HOW: Error: simulated db error |     at Function.<anonymous> (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\tests\stockTransaction_negative.test.js:34:15) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\jest-mock\build\index.js:397:39
+- PLAN: inspect and retry
+
+- DETAILS: stockIn
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Cabang deleted: bf58e0a1-65b2-4253-a814-d7aa8ba5a87a
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Kedai deleted: ddff1732-21c7-4087-8bf5-9281ac055a6c
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Kedai created: 8d256102-90fa-4cea-904c-5cbf90bc983c
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- InventarisMaster created: item-neg2-1757440751134
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Kedai deleted: 8d256102-90fa-4cea-904c-5cbf90bc983c
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Kedai created: c68cd8c5-0c50-42e5-a5c1-1e9356d78efa
+
+
+### 2025-09-10 00:59:11 WIB — INFO
+
+- Cabang created: 8925a9b2-6b5e-40ac-969c-c8b9faf7eac1
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Pengguna created: 33e7d0f1-25fd-4b28-a357-7adcad7fd920
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Pengguna updated: 33e7d0f1-25fd-4b28-a357-7adcad7fd920
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Pengguna deleted: 33e7d0f1-25fd-4b28-a357-7adcad7fd920
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Cabang deleted: 8925a9b2-6b5e-40ac-969c-c8b9faf7eac1
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Kedai deleted: c68cd8c5-0c50-42e5-a5c1-1e9356d78efa
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Kedai created: a8c6489b-6192-4a66-b0d6-352563ebb9e2
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Cabang created: 3b7209ba-27f1-4cc7-945e-4f525ad5d498
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- InventarisMaster created: item-1757440752729
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Stock IN processed: item-1757440752729@3b7209ba-27f1-4cc7-945e-4f525ad5d498 +10
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Cabang deleted: 3b7209ba-27f1-4cc7-945e-4f525ad5d498
+
+
+### 2025-09-10 00:59:12 WIB — INFO
+
+- Kedai deleted: a8c6489b-6192-4a66-b0d6-352563ebb9e2
+
+
+### 2025-09-10 00:59:13 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:13 WIB — ERROR
+
+- WHAT: RBAC: forbidden
+- WHY: Forbidden: insufficient role
+- HOW: Error: Forbidden: insufficient role |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\requireRole.js:10:21 |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: allowed: Pemilik
+
+- DETAILS: requireRole
+
+
+### 2025-09-10 00:59:13 WIB — INFO
+
+- Kedai created: f59c117a-832c-40a5-9586-bee688f08737
+
+
+### 2025-09-10 00:59:14 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:14 WIB — ERROR
+
+- WHAT: Auth: missing token
+- WHY: No token provided
+- HOW: Error: No token provided |     at verifyToken (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\verifyToken.js:10:14) |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: provide Authorization header
+
+- DETAILS: verifyToken
+
+
+### 2025-09-10 00:59:54 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Kedai created: 009510c0-a57b-468d-98d7-ff46c7f02a4c
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Cabang created: 433ffadb-e634-40fe-9675-d379a6fb2a5e
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- InventarisMaster created: item-con-1757440796091
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Stock IN processed: item-con-1757440796091@433ffadb-e634-40fe-9675-d379a6fb2a5e +10
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Stock IN processed: item-con-1757440796091@433ffadb-e634-40fe-9675-d379a6fb2a5e +10
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Stock IN processed: item-con-1757440796091@433ffadb-e634-40fe-9675-d379a6fb2a5e +10
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Stock IN processed: item-con-1757440796091@433ffadb-e634-40fe-9675-d379a6fb2a5e +10
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Stock IN processed: item-con-1757440796091@433ffadb-e634-40fe-9675-d379a6fb2a5e +10
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Cabang deleted: 433ffadb-e634-40fe-9675-d379a6fb2a5e
+
+
+### 2025-09-10 00:59:56 WIB — INFO
+
+- Kedai deleted: 009510c0-a57b-468d-98d7-ff46c7f02a4c
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Kedai created: 742bdd9d-8ad3-4937-bc54-5930f4ecd02f
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Cabang created: b1adecfd-0bc0-47b8-85b5-f344094492cc
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Pengguna created: a9bcbe02-e334-4095-ad3e-3e392c86250e
+
+
+### 2025-09-10 00:59:57 WIB — ERROR
+
+- WHAT: Pengguna create failed
+- WHY: Validation error
+- HOW: Error:  |     at Query.run (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\dialects\mysql\query.js:46:25) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\sequelize\src\sequelize.js:650:28
+- PLAN: TBD
+
+- DETAILS: createPengguna
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Pengguna deleted: a9bcbe02-e334-4095-ad3e-3e392c86250e
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Cabang deleted: b1adecfd-0bc0-47b8-85b5-f344094492cc
+
+
+### 2025-09-10 00:59:57 WIB — INFO
+
+- Kedai deleted: 742bdd9d-8ad3-4937-bc54-5930f4ecd02f
+
+
+### 2025-09-10 00:59:58 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:58 WIB — INFO
+
+- Auth: register failed Validation error
+
+
+### 2025-09-10 00:59:58 WIB — INFO
+
+- Auth: login testuser+ci@test.local
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Kedai created: 467f97e8-da6a-412e-9b27-9fe52d5f209d
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Cabang created: 69ae4493-f411-4c9f-ada2-6ee34c34ce15
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- InventarisMaster created: item-hpp-1757440799296
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Stock IN processed: item-hpp-1757440799296@69ae4493-f411-4c9f-ada2-6ee34c34ce15 +10
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Stock IN processed: item-hpp-1757440799296@69ae4493-f411-4c9f-ada2-6ee34c34ce15 +5
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Cabang deleted: 69ae4493-f411-4c9f-ada2-6ee34c34ce15
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Kedai deleted: 467f97e8-da6a-412e-9b27-9fe52d5f209d
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Kedai created: e7a60315-9585-4ec4-954f-6f681df3a64a
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Cabang created: bd1639d2-2f27-488c-a5a7-0ea306745ff1
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- InventarisMaster created: item-so-1757440799296
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Stock IN processed: item-so-1757440799296@bd1639d2-2f27-488c-a5a7-0ea306745ff1 +20
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Cabang deleted: bd1639d2-2f27-488c-a5a7-0ea306745ff1
+
+
+### 2025-09-10 00:59:59 WIB — INFO
+
+- Kedai deleted: e7a60315-9585-4ec4-954f-6f681df3a64a
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Kedai created: ade85e1d-22aa-4764-b19a-6392e492936c
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Cabang created: 7bc547f1-dffa-4743-b723-45f496b0adde
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- InventarisMaster created: item-neg-1757440800253
+
+
+### 2025-09-10 01:00:00 WIB — ERROR
+
+- WHAT: Stock IN failed
+- WHY: simulated db error
+- HOW: Error: simulated db error |     at Function.<anonymous> (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\tests\stockTransaction_negative.test.js:34:15) |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\jest-mock\build\index.js:397:39
+- PLAN: inspect and retry
+
+- DETAILS: stockIn
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Cabang deleted: 7bc547f1-dffa-4743-b723-45f496b0adde
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Kedai deleted: ade85e1d-22aa-4764-b19a-6392e492936c
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Kedai created: 7d9e96c0-17a2-4a80-a329-5cb559f2d7d5
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- InventarisMaster created: item-neg2-1757440800253
+
+
+### 2025-09-10 01:00:00 WIB — INFO
+
+- Kedai deleted: 7d9e96c0-17a2-4a80-a329-5cb559f2d7d5
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Kedai created: 6d16aded-712d-42eb-affc-c35819949e0c
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Cabang created: bd210725-d5aa-4466-a99f-f79a62421510
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Pengguna created: 3868d039-ffef-41a3-b08a-234951aeb54b
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Pengguna updated: 3868d039-ffef-41a3-b08a-234951aeb54b
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Pengguna deleted: 3868d039-ffef-41a3-b08a-234951aeb54b
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Cabang deleted: bd210725-d5aa-4466-a99f-f79a62421510
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Kedai deleted: 6d16aded-712d-42eb-affc-c35819949e0c
+
+
+### 2025-09-10 01:00:01 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Kedai created: feb4a151-e044-4443-bd32-39aae9100302
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Cabang created: 5ce7d0c1-1d72-4b4b-b86e-3b71a556de92
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- InventarisMaster created: item-1757440802052
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Stock IN processed: item-1757440802052@5ce7d0c1-1d72-4b4b-b86e-3b71a556de92 +10
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Cabang deleted: 5ce7d0c1-1d72-4b4b-b86e-3b71a556de92
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Kedai deleted: feb4a151-e044-4443-bd32-39aae9100302
+
+
+### 2025-09-10 01:00:02 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 01:00:02 WIB — ERROR
+
+- WHAT: Auth: missing token
+- WHY: No token provided
+- HOW: Error: No token provided |     at verifyToken (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\verifyToken.js:10:14) |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: provide Authorization header
+
+- DETAILS: verifyToken
+
+
+### 2025-09-10 01:00:03 WIB — INFO
+
+- Server started at http://192.168.1.188:5151
+
+
+### 2025-09-10 01:00:03 WIB — ERROR
+
+- WHAT: RBAC: forbidden
+- WHY: Forbidden: insufficient role
+- HOW: Error: Forbidden: insufficient role |     at F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\middleware\requireRole.js:10:21 |     at Layer.handle [as handle_request] (F:\MIIT2024\PROJECTS\eezeeKedai_t2\be\node_modules\express\lib\router\layer.js:95:5)
+- PLAN: allowed: Pemilik
+
+- DETAILS: requireRole
+
+
+### 2025-09-10 01:00:03 WIB — INFO
+
+- Kedai created: f38898b8-cd9b-495b-8e0c-cf1276ea6807
+
+
+### 2025-09-10 01:41:48 WIB — INFO
+
+- Ran ESLint in fe
+
+- meta: {"files":["fe/.eslintrc.cjs","fe/src/api/client.ts"],"result":"EXIT=0"}
+

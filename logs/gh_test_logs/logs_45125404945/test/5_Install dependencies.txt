@@ -1,0 +1,30 @@
+﻿2025-09-09T16:58:23.8810284Z ##[group]Run cd be
+2025-09-09T16:58:23.8810581Z [36;1mcd be[0m
+2025-09-09T16:58:23.8810758Z [36;1mnpm ci[0m
+2025-09-09T16:58:23.8875262Z shell: /usr/bin/bash -e {0}
+2025-09-09T16:58:23.8875525Z ##[endgroup]
+2025-09-09T16:58:25.6720972Z npm error code EUSAGE
+2025-09-09T16:58:25.6721618Z npm error
+2025-09-09T16:58:25.6723313Z npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+2025-09-09T16:58:25.6724643Z npm error
+2025-09-09T16:58:25.6725180Z npm error Missing: husky@8.0.3 from lock file
+2025-09-09T16:58:25.6725665Z npm error
+2025-09-09T16:58:25.6726121Z npm error Clean install a project
+2025-09-09T16:58:25.6726588Z npm error
+2025-09-09T16:58:25.6726895Z npm error Usage:
+2025-09-09T16:58:25.6727263Z npm error npm ci
+2025-09-09T16:58:25.6727600Z npm error
+2025-09-09T16:58:25.6727945Z npm error Options:
+2025-09-09T16:58:25.6729039Z npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2025-09-09T16:58:25.6730402Z npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2025-09-09T16:58:25.6731723Z npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2025-09-09T16:58:25.6732981Z npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2025-09-09T16:58:25.6733899Z npm error [--no-bin-links] [--no-fund] [--dry-run]
+2025-09-09T16:58:25.6734832Z npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2025-09-09T16:58:25.6735867Z npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2025-09-09T16:58:25.6736472Z npm error
+2025-09-09T16:58:25.6737061Z npm error aliases: clean-install, ic, install-clean, isntall-clean
+2025-09-09T16:58:25.6737561Z npm error
+2025-09-09T16:58:25.6737924Z npm error Run "npm help ci" for more info
+2025-09-09T16:58:25.6739161Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-09T16_58_23_951Z-debug-0.log
+2025-09-09T16:58:25.6816792Z ##[error]Process completed with exit code 1.

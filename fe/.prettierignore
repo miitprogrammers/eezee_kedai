@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.git
+.husky
+be/node_modules
+fe/node_modules
+**/coverage
+*.log
+docs/postman

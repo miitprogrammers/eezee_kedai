@@ -53,8 +53,12 @@ app.get("/health", (req, res) => res.json({ status: "ok", time: Date.now() }));
 try {
   const openapiYamlPath = path.join(__dirname, "..", "docs", "openapi.yaml");
   const openapiJsonPath = path.join(__dirname, "..", "docs", "openapi.json");
-  app.get("/api/docs/openapi.yaml", (req, res) => res.sendFile(openapiYamlPath));
-  app.get("/api/docs/openapi.json", (req, res) => res.sendFile(openapiJsonPath));
+  app.get("/api/docs/openapi.yaml", (req, res) =>
+    res.sendFile(openapiYamlPath)
+  );
+  app.get("/api/docs/openapi.json", (req, res) =>
+    res.sendFile(openapiJsonPath)
+  );
 } catch (e) {
   // ignore
 }

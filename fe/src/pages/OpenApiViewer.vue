@@ -13,27 +13,29 @@
 </template>
 
 <script setup>
-  import { onMounted, ref } from 'vue'
-  import { getOpenApiJson } from '../api/client'
+  import { onMounted, ref } from 'vue';
+  import { getOpenApiJson } from '../api/client';
 
-  const spec = ref(null)
-  const loading = ref(true)
-  const error = ref(null)
-  const paths = ref([])
+  const spec = ref(null);
+  const loading = ref(true);
+  const error = ref(null);
+  const paths = ref([]);
 
   onMounted(async () => {
     try {
-      const j = await getOpenApiJson()
-      spec.value = j
-      paths.value = Object.keys(j.paths || {})
+      const j = await getOpenApiJson();
+      spec.value = j;
+      paths.value = Object.keys(j.paths || {});
     } catch (err) {
-      error.value = err && err.message ? err.message : String(err)
+      error.value = err && err.message ? err.message : String(err);
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  })
+  });
 </script>
 
 <style scoped>
-h1 { margin-bottom: 0.5rem }
+  h1 {
+    margin-bottom: 0.5rem;
+  }
 </style>
