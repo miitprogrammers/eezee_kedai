@@ -46,11 +46,16 @@ jobs:
           echo "DB_USER=root" >> .env
           echo "DB_PASS=root" >> .env
           echo "DB_NAME=eezee_kedai_test" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "NODE_ENV=test" >> .env
 
-      - name: Run migrations
+      - name: Run migrations (with retries)
         run: |
           cd be
-          npx sequelize-cli db:migrate --env development
+          # retry migrations a few times while DB service finishes initialization
+          for i in 1 2 3 4 5; do
+            npx sequelize-cli db:migrate --env test && break || sleep $((i * 2))
+          done
 
       - name: Run tests
         run: |
