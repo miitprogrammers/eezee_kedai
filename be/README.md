@@ -70,3 +70,59 @@ npm run seed:undo
 Checkpoint summary
 
 The automated checkpoint run at 2025-09-09 21:52:50 wrote a concise summary to `docs/checkpoint_summary_20250909-215250.md` and a full log to `logs/checkpoint-20250909-215250.log`.
+
+## Example requests (auth flow)
+
+Sample curl: register -> login -> call protected endpoint
+
+```bash
+# Register (optional)
+curl -X POST http://localhost:3000/api/auth/register \
+	-H 'Content-Type: application/json' \
+	-d '{"nama":"Pemilik Test","email":"pemilik@test.local","password":"password123","role":"Pemilik"}'
+
+# Login
+TOKEN=$(curl -s -X POST http://localhost:3000/api/auth/login \
+	-H 'Content-Type: application/json' \
+	-d '{"email":"pemilik@test.local","password":"password123"}' | jq -r .token)
+
+# Create Kedai (protected)
+curl -X POST http://localhost:3000/api/mgmt/kedai \
+	-H "Authorization: Bearer $TOKEN" \
+	-H 'Content-Type: application/json' \
+	-d '{"nama":"My Kedai"}'
+```
+
+Supertest snippet (Jest) — auth flow and protected call
+
+```js
+const request = require('supertest');
+const { app } = require('../index');
+
+test('auth flow: register -> login -> create kedai', async () => {
+	// register (if needed)
+	await request(app)
+		.post('/api/auth/register')
+		.send({ nama: 'Pemilik Test', email: 'pemilik@test.local', password: 'password123', role: 'Pemilik' })
+		.expect(function (res) {
+			// may be 201 or 400 if user exists
+			if (![201, 400].includes(res.status)) throw new Error('unexpected status ' + res.status);
+		});
+
+	// login
+	const loginRes = await request(app)
+		.post('/api/auth/login')
+		.send({ email: 'pemilik@test.local', password: 'password123' })
+		.expect(200);
+
+	const token = loginRes.body.token;
+	expect(token).toBeDefined();
+
+	// call protected endpoint
+	await request(app)
+		.post('/api/mgmt/kedai')
+		.set('Authorization', `Bearer ${token}`)
+		.send({ nama: 'Integration Kedai' })
+		.expect(201);
+});
+```
